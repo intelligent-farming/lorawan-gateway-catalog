@@ -1,0 +1,49 @@
+{
+  "vendor": "milesight",
+  "model": "ug65",
+  "name": "Milesight UG65 LoRaWAN Gateway",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1302",
+  "oui": [
+    "24E124",
+    "C0BA1F"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.23.150",
+    "apModeSsid": "Gateway_******",
+    "defaultCredentials": {
+      "username": "admin",
+      "password": "password"
+    },
+    "credentialsNote": "Milesight default; you are advised to change it on first login. 192.168.23.150 is the wired-Ethernet IP; over the Wi-Fi AP (SSID Gateway_******) browse to 192.168.1.1."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "Packet Forwarder → General"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.milesight.com/iot/product/lorawan-gateway/ug65",
+    "sha256": "5fcc19b5b2953aa3dd9b8ed653db8e906bea5a9435190c7e819c2aa4a5d1e36b",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

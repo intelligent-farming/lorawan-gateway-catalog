@@ -1,0 +1,49 @@
+{
+  "vendor": "rakwireless",
+  "model": "rak7289",
+  "name": "RAK7289 WisGate Edge Pro",
+  "regions": [
+    "EU868",
+    "US915",
+    "AU915"
+  ],
+  "chipset": "SX1303 (up to two concentrators)",
+  "oui": [
+    "AC1F09"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.230.1",
+    "apModeSsid": "RAK7289_XXXX",
+    "defaultCredentials": {
+      "username": "root",
+      "password": "root"
+    },
+    "credentialsNote": "WisGateOS 1 default; firmware-dependent — change it on first login. Never present as a security guarantee."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "LoRa Network → Network Settings (Work Mode: Packet Forwarder)"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/overview/",
+    "sha256": "b389e299700250cf72c8e5a673e222e4c07cbb94af423fff4730a36c287ea99c",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

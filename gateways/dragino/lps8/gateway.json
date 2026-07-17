@@ -1,0 +1,47 @@
+{
+  "vendor": "dragino",
+  "model": "lps8",
+  "name": "LPS8 Indoor LoRaWAN Gateway",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1308",
+  "oui": [
+    "A84041"
+  ],
+  "admin": {
+    "defaultUrl": "http://10.130.1.1",
+    "apModeSsid": "dragino-XXXXXX",
+    "defaultCredentials": {
+      "username": "root",
+      "password": "dragino"
+    },
+    "credentialsNote": "LuCI (OpenWrt) default; change it on first login. 10.130.1.1 is the Wi-Fi AP-mode IP (SSID dragino-xxxxxx, Wi-Fi password dragino+dragino); over Ethernet, browse to the DHCP-assigned IP on port 8000. The LPS8N variant is the same UI but an SX1302 concentrator; the LPS8v2 is a different (Debian) platform."
+  },
+  "configMethods": [
+    "web-ui",
+    "ssh-cli",
+    "forwarder-file"
+  ],
+  "packetForwarders": [
+    "semtech-udp"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json",
+      "forwarderFilePath": "/etc/lora/global_conf.json"
+    },
+    "web-ui": {
+      "path": "LoRaWAN → LoRaWAN Semtech UDP"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.dragino.com/products/lora-lorawan-gateway/item/148-lps8.html",
+    "sha256": "37acfa5dc6472b0b5bf795586e6c96d7cfd4bcc3063aaedbd4da120c44612824",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

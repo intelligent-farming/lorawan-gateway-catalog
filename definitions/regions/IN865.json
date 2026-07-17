@@ -1,0 +1,19 @@
+{
+  "id": "IN865",
+  "name": "IN865 (865-867 MHz)",
+  "description": "India ISM band. Three mandatory 125 kHz uplink channels.",
+  "band": "IN865",
+  "defaultSubBand": null,
+  "channelPlan": {
+    "radios": [{ "freq": 865232500 }, { "freq": 865985000 }],
+    "multiSF": [
+      { "radio": 0, "if": -170000 },
+      { "radio": 0, "if": 170000 },
+      { "radio": 1, "if": 0 }
+    ],
+    "loraStd": null,
+    "fsk": null,
+    "rx2": { "freq": 866550000, "dr": 2 }
+  },
+  "notes": "Three mandatory channels: 865.0625, 865.4025, 865.985 MHz (radio 0 centered 865.2325, radio 1 at 865.985). No default high-BW or FSK channel. RX2 866.55 MHz SF10BW125 (DR2). Slots 3-7 are disabled in the rendered radio block."
+}

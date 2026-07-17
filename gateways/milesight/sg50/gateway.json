@@ -1,0 +1,49 @@
+{
+  "vendor": "milesight",
+  "model": "sg50",
+  "name": "Milesight SG50 Solar LoRaWAN Gateway",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1302",
+  "oui": [
+    "24E124",
+    "C0BA1F"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.23.1",
+    "apModeSsid": "Gateway_******",
+    "defaultCredentials": {
+      "username": "admin",
+      "password": "password"
+    },
+    "credentialsNote": "Milesight default; you are advised to change it on first login. The SG50 has no wired Ethernet — 192.168.23.1 is its Wi-Fi AP address (SSID Gateway_******); setup is over Wi-Fi or cellular."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "Packet Forward → General"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.milesight.com/iot/product/lorawan-gateway/sg50",
+    "sha256": "4986d5747b08c4b58d262859fa74b23e3a300760b49338bdb345b3be1db95911",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

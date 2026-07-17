@@ -1,0 +1,44 @@
+{
+  "vendor": "kerlink",
+  "model": "ifemtocell",
+  "name": "Kerlink Wirnet iFemtoCell",
+  "regions": [
+    "EU868",
+    "US915",
+    "IN865"
+  ],
+  "chipset": "SX1301",
+  "oui": [
+    "7076FF"
+  ],
+  "admin": {
+    "defaultUrl": "https://192.168.120.1",
+    "apModeSsid": "klk-wifc-XXXXXX",
+    "defaultCredentials": {
+      "username": "admin",
+      "password": "admin"
+    },
+    "credentialsNote": "KerOS web admin default is admin/admin (newer firmware: admin/pwd4admin) — change it. The SSH root password is per-device: pdmk-XXXXXX (last 6 chars of the Board ID on the label). 192.168.120.1 is the local USB/Wi-Fi-AP management address; the Ethernet port is a DHCP client, so use its assigned IP on the LAN."
+  },
+  "configMethods": [
+    "ssh-cli",
+    "forwarder-file"
+  ],
+  "packetForwarders": [
+    "semtech-udp"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json",
+      "forwarderFilePath": "/user/spf/etc/global_conf.json"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.kerlink.com/product/wirnet-ifemtocell/",
+    "sha256": "861d6b887b3eacac85a7cabe8fc3d542207b76d2b4a0565f8adee617f57efa80",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

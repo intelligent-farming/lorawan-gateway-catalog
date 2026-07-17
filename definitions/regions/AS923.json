@@ -1,0 +1,24 @@
+{
+  "id": "AS923",
+  "name": "AS923-1 (915-928 MHz)",
+  "description": "Asia-Pacific band (AS923-1 plan). Eight 125 kHz uplink channels across 923.2-924.6 MHz plus an SF7BW250 and an FSK channel.",
+  "band": "AS923",
+  "defaultSubBand": null,
+  "channelPlan": {
+    "radios": [{ "freq": 923500000 }, { "freq": 924300000 }],
+    "multiSF": [
+      { "radio": 0, "if": -300000 },
+      { "radio": 0, "if": -100000 },
+      { "radio": 0, "if": 100000 },
+      { "radio": 0, "if": 300000 },
+      { "radio": 1, "if": -300000 },
+      { "radio": 1, "if": -100000 },
+      { "radio": 1, "if": 100000 },
+      { "radio": 1, "if": 300000 }
+    ],
+    "loraStd": { "radio": 0, "if": -100000, "bandwidth": 250000, "spreadFactor": 7 },
+    "fsk": { "radio": 1, "if": 200000, "bandwidth": 125000, "datarate": 50000 },
+    "rx2": { "freq": 923200000, "dr": 2 }
+  },
+  "notes": "Channels 923.2-924.6 MHz. SF7BW250 on 923.4, FSK on 924.5. RX2 923.2 MHz SF10BW125 (DR2). AS923 has regional frequency-offset variants (AS923-2/-3); this is the AS923-1 plan."
+}

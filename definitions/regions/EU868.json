@@ -1,0 +1,24 @@
+{
+  "id": "EU868",
+  "name": "EU868 (863-870 MHz)",
+  "description": "European ISM band. Eight 125 kHz uplink channels across 867-868 MHz plus an SF7BW250 and an FSK channel.",
+  "band": "EU868",
+  "defaultSubBand": null,
+  "channelPlan": {
+    "radios": [{ "freq": 867500000 }, { "freq": 868500000 }],
+    "multiSF": [
+      { "radio": 1, "if": -400000 },
+      { "radio": 1, "if": -200000 },
+      { "radio": 1, "if": 0 },
+      { "radio": 0, "if": -400000 },
+      { "radio": 0, "if": -200000 },
+      { "radio": 0, "if": 0 },
+      { "radio": 0, "if": 200000 },
+      { "radio": 0, "if": 400000 }
+    ],
+    "loraStd": { "radio": 1, "if": -200000, "bandwidth": 250000, "spreadFactor": 7 },
+    "fsk": { "radio": 1, "if": 300000, "bandwidth": 125000, "datarate": 50000 },
+    "rx2": { "freq": 869525000, "dr": 0 }
+  },
+  "notes": "Channels: 868.1/868.3/868.5 (radio 1) and 867.1/867.3/867.5/867.7/867.9 (radio 0). SF7BW250 on 868.3, FSK on 868.8. RX2 869.525 MHz SF12 (DR0)."
+}

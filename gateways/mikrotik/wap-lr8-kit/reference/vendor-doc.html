@@ -1,0 +1,855 @@
+    
+
+<!DOCTYPE html>
+<html lang="en-GB"   data-theme="dark:dark light:light" data-color-mode-auto  >
+<head>
+            
+        
+
+                            <title>Certificates - RouterOS - MikroTik Documentation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/docs">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://help.mikrotik.com/docs">
+
+    <meta id="atlassian-token" name="atlassian-token" content="117e2a649c992b617eb8858f7e1c1b7134e06b57">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="ROS">
+<script type="text/javascript">
+        var contextPath = '/docs';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1784228877648">
+        
+    
+        
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="57396a65e60e60a1248106242dba48a67d535a1eab392358bd4ca5e86db761aa">
+            <meta id="team-calendars-has-jira-link" content="true">
+            <meta name="ajs-team-calendars-display-time-format" content="displayTimeFormat12">
+            <meta id="team-calendars-display-week-number" content="false">
+            <meta id="team-calendars-user-timezone" content="Europe/Riga">
+            <script type="text/x-template" id="team-calendars-messages" title="team-calendars-messages"><fieldset class="i18n hidden"><input type="hidden" name="calendar3.month.long.july" value="July"><input type="hidden" name="calendar3.day.short.wednesday" value="Wed"><input type="hidden" name="calendar3.day.short.thursday" value="Thu"><input type="hidden" name="calendar3.month.short.march" value="Mar"><input type="hidden" name="calendar3.month.long.april" value="April"><input type="hidden" name="calendar3.month.long.october" value="October"><input type="hidden" name="calendar3.month.long.august" value="August"><input type="hidden" name="calendar3.month.short.july" value="Jul"><input type="hidden" name="calendar3.month.short.may" value="May"><input type="hidden" name="calendar3.month.short.november" value="Nov"><input type="hidden" name="calendar3.day.long.friday" value="Friday"><input type="hidden" name="calendar3.day.long.sunday" value="Sunday"><input type="hidden" name="calendar3.day.long.saturday" value="Saturday"><input type="hidden" name="calendar3.month.short.april" value="Apr"><input type="hidden" name="calendar3.day.long.wednesday" value="Wednesday"><input type="hidden" name="calendar3.month.long.december" value="December"><input type="hidden" name="calendar3.month.short.october" value="Oct"><input type="hidden" name="calendar3.day.long.monday" value="Monday"><input type="hidden" name="calendar3.month.short.june" value="Jun"><input type="hidden" name="calendar3.day.short.monday" value="Mon"><input type="hidden" name="calendar3.day.short.tuesday" value="Tue"><input type="hidden" name="calendar3.day.short.saturday" value="Sat"><input type="hidden" name="calendar3.month.long.march" value="March"><input type="hidden" name="calendar3.month.long.june" value="June"><input type="hidden" name="calendar3.month.short.february" value="Feb"><input type="hidden" name="calendar3.month.short.august" value="Aug"><input type="hidden" name="calendar3.month.short.december" value="Dec"><input type="hidden" name="calendar3.day.short.sunday" value="Sun"><input type="hidden" name="calendar3.month.long.february" value="February"><input type="hidden" name="calendar3.day.long.tuesday" value="Tuesday"><input type="hidden" name="calendar3.month.long.may" value="May"><input type="hidden" name="calendar3.month.long.september" value="September"><input type="hidden" name="calendar3.month.long.november" value="November"><input type="hidden" name="calendar3.month.short.january" value="Jan"><input type="hidden" name="calendar3.month.short.september" value="Sept"><input type="hidden" name="calendar3.day.long.thursday" value="Thursday"><input type="hidden" name="calendar3.month.long.january" value="January"><input type="hidden" name="calendar3.day.short.friday" value="Fri"></fieldset></script>
+            <meta name="ajs-emojis-allow-current-user-upload-emojis" content="true">
+<meta name="ajs-emojis-max-upload-file-size" content="1">
+
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            
+    
+    
+            <meta name="ajs-page-title" content="Certificates">
+            <meta name="ajs-latest-published-page-title" content="Certificates">
+            <meta name="ajs-space-name" content="RouterOS">
+            <meta name="ajs-page-id" content="2555969">
+            <meta name="ajs-latest-page-id" content="2555969">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Authentication, Authorization, Accounting">
+            <meta name="ajs-parent-page-id" content="119144604">
+            <meta name="ajs-space-key" content="ROS">
+            <meta name="ajs-quicksearch-request-timeout" content="5000">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="0">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="false">
+            <meta name="ajs-context-path" content="/docs">
+            <meta name="ajs-base-url" content="https://help.mikrotik.com/docs">
+            <meta name="ajs-version-number" content="9.2.21">
+            <meta name="ajs-build-number" content="9116">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/docs/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/docs">
+            <meta name="ajs-global-settings-attachment-max-size" content="104857600">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-user-timezone-offset" content="7200000">
+            <meta name="ajs-enabled-dark-features" content="com.atlassian.profiling.ita.metrics.deny,confluence.in.product.diagnostics.deny,site-wide.synchrony,site-wide.shared-drafts.disable,confluence.view.edit.transition,confluence.attachments.bulk.delete,confluence-inline-comments-resolved,http.session.registrar,theme.switcher,scope.manage.subscriptions,atlassian.cdn.static.assets,confluence.efi.onboarding.rich.space.content,file-annotations,crowd.sync.nested.groups.group.membership.changes.batching.enabled,atlassian.webresource.performance.tracking.disable,confluence.page.readtime,atlassian.authentication.sso.fallback.to.cached.user.when.operation.failed,lucene.caching.filter,confluence.table.resizable,notification.batch,confluence-inline-comments-rich-editor,confluence.copy-heading-link,site-wide.synchrony.opt-in,atlassian.webresource.twophase.js.i18n.disabled,confluence.edit.wordcount,gatekeeper-ui-v2,confluence.search.improvements.ranking,crowd.event.transformer.directory.manager.cache,mobile.supported.version,crowd.sync.delete.user.memberships.batching.enabled,confluence.dark.theme.text.colors,quick-reload-inline-comments-flags,cql.search.screen,clc.quick.create,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,pdf-preview,com.atlassian.analytics.essential.supported,confluence.retention.rules.trash.fast.removal,previews.sharing,previews.versions,collaborative-audit-log,confluence.reindex.improvements,previews.conversion-service,atlassian.servlet.filter.default.to.licensed.access.enabled,read.only.mode,graphql,benefits.modal,previews.trigger-all-file-types,AsyncReplicationCache,attachment.extracted.text.extractor,confluence.readable.url,previews.sharing.pushstate,tc.tacca.dacca,confluence.reindex.audit,atlassian.rest.default.to.licensed.access.enabled,confluence.retention.rules.version.fast.removal,confluence.denormalisedpermissions,file-annotations.likes,v2.content.name.searcher,confluence.reindex.spaces,confluence.fast-xml-backup-restore,embedded.crowd.directory.azuread.enabled,pulp,confluence-inline-comments,confluence-inline-comments-dangling-comment,confluence.retention.rules">
+            <meta name="ajs-atl-token" content="117e2a649c992b617eb8858f7e1c1b7134e06b57">
+            <meta name="ajs-user-date-pattern" content="dd MMM yyyy">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-same-site-cookie-default-policy" content="Lax">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="/docs/s/hb6k5w/9116/n2r6gc/56/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/docs/s/hb6k5w/9116/n2r6gc/56/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="/docs/opensearch/osd.action" title="MikroTik Documentation"/>
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible Project\u0022,\u0022fecru.repository\u0022:\u0022FishEye Repository\u0022,\u0022stash.project\u0022:\u0022Stash Project\u0022,\u0022generic.entity\u0022:\u0022Generic Project\u0022,\u0022confluence.space\u0022:\u0022Confluence Space\u0022,\u0022bamboo.project\u0022:\u0022Bamboo Project\u0022,\u0022jira.project\u0022:\u0022Jira Project\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022Charlies\u0022,\u0022fecru.project\u0022:\u0022Crucible Projects\u0022,\u0022fecru.repository\u0022:\u0022FishEye Repositories\u0022,\u0022stash.project\u0022:\u0022Stash Projects\u0022,\u0022generic.entity\u0022:\u0022Generic Projects\u0022,\u0022confluence.space\u0022:\u0022Confluence Spaces\u0022,\u0022bamboo.project\u0022:\u0022Bamboo Projects\u0022,\u0022jira.project\u0022:\u0022Jira Projects\u0022}}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022/docs\u0022";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022Basic Access\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022Trusted Applications\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022CORS\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.ThreeLeggedOAuth2AuthenticationProvider\u0022:\u0022OAuth 2.0\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022View more recently visited\u0022,\u0022search.ui.search.results.empty\u0022:\u0022We couldn\u0027\u0027t find anything matching \u005C\u0022{0}\u005C\u0022.\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022Clear selected items\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022Show more app results...\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022Contributor\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022CURRENT\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022Clear text\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022clear your filters.\u0022,\u0022help.search.ui.link.title\u0022:\u0022Search tips\u0022,\u0022search.ui.container.close.text\u0022:\u0022Close\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022The past month\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022More results\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022Date\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022The past week\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022Team calendar\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022Last modified within\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022Find spaces...\u0022,\u0022search.ui.generic.error\u0022:\u0022Something went wrong. Refresh the page, or contact your admin if this keeps happening.\u0022,\u0022search.ui.recent.spaces\u0022:\u0022Recent Spaces\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022Space\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022Find space categories...\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022Search archived spaces\u0022,\u0022search.ui.filter.label\u0022:\u0022filter\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022Any time\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022The past day\u0022,\u0022search.ui.filters.heading\u0022:\u0022Filter by\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022Find labels...\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022Start exploring. Your search results will appear here.\u0022,\u0022search.ui.input.label\u0022:\u0022Search\u0022,\u0022search.ui.input.aria.label\u0022:\u0022Search query\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0} search result|1\u003c{0} search results}\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022Label\u0022,\u0022search.ui.container.clear.ariaLabel\u0022:\u0022Clear\u0022,\u0022search.ui.input.alert\u0022:\u0022Hit enter to search\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022We can\u0027\u0027t find anything matching your search\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022User profile\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022Find people...\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022Type\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022The past year\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022Advanced search\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022Space\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022Try a different search term or\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022Space category\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022We couldn\u0027\u0027t find anything matching your search.\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022Show more settings and app results...\u0022,\u0022search.ui.recent.pages\u0022:\u0022Recently visited\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0} search result|1\u003c{0} search results}. Have an account? {1}Log in{2} to expand your search.\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022Start exploring. Pages and spaces you\u0027\u0027ve visited recently will appear here.\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022recent spaces\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022Crowd\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022FishEye / Crucible\u0022,\u0022stash\u0022:\u0022Stash\u0022,\u0022jiraMobile\u0022:\u0022Jira DC Mobile Application\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022Reference Application\u0022,\u0022bamboo\u0022:\u0022Bamboo\u0022,\u0022confluenceMobile\u0022:\u0022Confluence DC Mobile Application\u0022,\u0022generic\u0022:\u0022Generic Application\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.whisper.atlassian-whisper-plugin:atlassian-whisper-bootstrap.WhisperData"]="{\u0022hasMessages\u0022:false,\u0022syncInit\u0022:false,\u0022baseUrl\u0022:\u0022https:\u005C/\u005C/help.mikrotik.com\u005C/docs\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-101/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.adding.project.link\u0022:\u0022Configuring+Project+links+across+Applications\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link rel="stylesheet" href="/docs/s/972fd8801743b7aec85de81b62fc3848-CDN/hb6k5w/9116/n2r6gc/47bcb706f99893dfa8545cd36dc709ed/_/download/contextbatch/css/_super/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link rel="stylesheet" href="/docs/s/5104fc5c97d5a29c011ce4c46b8c5aac-CDN/hb6k5w/9116/n2r6gc/49233bbeb8810812328c06e0eeba8642/_/download/contextbatch/css/atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super/batch.css?analytics-enabled=false&amp;cefp_collab_enabled=false&amp;cefp_ed_perm=false&amp;cefp_is_admin=false&amp;gatekeeper-ui-v2=true&amp;highlightactions=true&amp;table-resizable.breaking-text=false&amp;whisper-enabled=true" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<link rel="stylesheet" href="/docs/s/d41d8cd98f00b204e9800998ecf8427e-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.page.design-tokens-compatibility-themes/com.atlassian.auiplugin:split_aui.page.design-tokens-compatibility-themes.css" data-wrm-key="com.atlassian.auiplugin:split_aui.page.design-tokens-compatibility-themes" data-wrm-batch-type="resource" media="all">
+<link rel="stylesheet" href="/docs/s/hb6k5w/9116/n2r6gc/50/_/styles/colors.css?spaceKey=ROS" media="all">
+<link rel="stylesheet" href="/docs/s/hb6k5w/9116/n2r6gc/50/_/styles/custom.css?spaceKey=ROS" media="all">
+<script src="/docs/s/9cfa81e5cce427b1ef6aa94b3a8a806e-CDN/hb6k5w/9116/n2r6gc/47bcb706f99893dfa8545cd36dc709ed/_/download/contextbatch/js/_super/batch.js?locale=en-GB" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script src="/docs/s/3096c838c62d81f4f514ea2bbc97b6dd-CDN/hb6k5w/9116/n2r6gc/49233bbeb8810812328c06e0eeba8642/_/download/contextbatch/js/atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super/batch.js?analytics-enabled=false&amp;cefp_collab_enabled=false&amp;cefp_ed_perm=false&amp;cefp_is_admin=false&amp;gatekeeper-ui-v2=true&amp;highlightactions=true&amp;locale=en-GB&amp;table-resizable.breaking-text=false&amp;whisper-enabled=true" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script src="/docs/s/ceff4fe41ab1a99405d47c7882b7afda-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.splitchunk.532dee4ffd/com.atlassian.auiplugin:split_aui.splitchunk.532dee4ffd.js?locale=en-GB" data-wrm-key="com.atlassian.auiplugin:split_aui.splitchunk.532dee4ffd" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script src="/docs/s/ceff4fe41ab1a99405d47c7882b7afda-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.splitchunk.0e8e0008dd/com.atlassian.auiplugin:split_aui.splitchunk.0e8e0008dd.js?locale=en-GB" data-wrm-key="com.atlassian.auiplugin:split_aui.splitchunk.0e8e0008dd" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script src="/docs/s/ceff4fe41ab1a99405d47c7882b7afda-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.page.design-tokens-base-themes/com.atlassian.auiplugin:split_aui.page.design-tokens-base-themes.js?locale=en-GB" data-wrm-key="com.atlassian.auiplugin:split_aui.page.design-tokens-base-themes" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script src="/docs/s/ceff4fe41ab1a99405d47c7882b7afda-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.page.design-tokens-compatibility-themes/com.atlassian.auiplugin:split_aui.page.design-tokens-compatibility-themes.js?locale=en-GB" data-wrm-key="com.atlassian.auiplugin:split_aui.page.design-tokens-compatibility-themes" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script src="/docs/s/ceff4fe41ab1a99405d47c7882b7afda-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.splitchunk.vendors--1d1867466a/com.atlassian.auiplugin:split_aui.splitchunk.vendors--1d1867466a.js?locale=en-GB" data-wrm-key="com.atlassian.auiplugin:split_aui.splitchunk.vendors--1d1867466a" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script src="/docs/s/ceff4fe41ab1a99405d47c7882b7afda-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.splitchunk.1d1867466a/com.atlassian.auiplugin:split_aui.splitchunk.1d1867466a.js?locale=en-GB" data-wrm-key="com.atlassian.auiplugin:split_aui.splitchunk.1d1867466a" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script src="/docs/s/ceff4fe41ab1a99405d47c7882b7afda-CDN/hb6k5w/9116/n2r6gc/9.12.13/_/download/batch/com.atlassian.auiplugin:split_aui.page.design-tokens-api/com.atlassian.auiplugin:split_aui.page.design-tokens-api.js?locale=en-GB" data-wrm-key="com.atlassian.auiplugin:split_aui.page.design-tokens-api" data-wrm-batch-type="resource" data-initially-rendered></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="MikroTik Documentation" />
+            
+    
+
+    
+                <link rel="canonical" href="https://help.mikrotik.com/docs/spaces/ROS/pages/2555969/Certificates">
+        <link rel="shortlink" href="https://help.mikrotik.com/docs/x/QQAn">
+    <meta name="wikilink" content="[ROS:Certificates]">
+    <meta name="page-version" content="56">
+    <meta name="ajs-page-version" content="56">
+
+</head>
+
+    
+<body      id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+    
+    
+
+
+
+
+
+<style>
+    html[data-color-mode="light"][data-theme~="light:light"],
+    html[data-color-mode="dark"][data-theme~="dark:light"] {
+        --confluence-custom-logo-content: url('/docs/download/attachments/327682/atl.site.logo?version=3&amp;modificationDate=1649942215425&amp;api=v2');
+    }
+</style>
+
+<header id="header" role="banner">
+            <a class="aui-skip-link" href="https://help.mikrotik.com/docs/login.action?os_destination=%2Fspaces%2FROS%2Fpages%2F2555969%2FCertificates" tabindex="1">Log in</a>
+        <nav class="aui-header aui-dropdown2-trigger-group" aria-label="Site"><div class="aui-header-inner"><div class="aui-header-before"><button class=" aui-dropdown2-trigger app-switcher-trigger aui-dropdown2-trigger-arrowless" aria-controls="app-switcher" aria-haspopup="true" role="button" data-aui-trigger href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></button><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" hidden data-is-user-admin="false" data-is-switcher="true"><div class="app-switcher-loading">Loading&hellip;</div></div></div><div class="aui-header-primary"><span id="logo" class="aui-header-logo aui-header-logo-custom"><a href="/docs/" aria-label="Confluence home page"><img src="/docs/download/attachments/327682/atl.site.logo?version=3&amp;modificationDate=1649942215425&amp;api=v2" alt="MikroTik Documentation" /></a></span><ul class="aui-nav">
+                            <li>
+            
+    
+        
+<a  id="space-directory-link" href="/docs/spacedirectory/view.action"  class=" aui-nav-imagelink"   title="Spaces">
+            <span>Spaces</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><button id="quick-search-query-button" aria-label="Search" aria-haspopup= "dialog" ></button><input id="quick-search-query" title="Search query" aria-label="Search query" placeholder="Search" type="text" aria-haspopup= "dialog" /><div id="quick-search-alert" role="alert">Hit enter to search</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" role="button" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">Help</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" >
+                    <div class="aui-dropdown2-section">
+                                    <strong role="heading" aria-level="2"></strong>
+                                <ul role="menu"
+                     role="menu"                    aria-label="Help"                    id="help-menu-link-pages"                    class="aui-list-truncate section-pages first">
+                                            <li role="presentation">
+        
+            
+<a role="menuitem"  id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-92/" class="    "      title="Visit the Confluence documentation home"  target="_blank"
+>
+        Online Help
+</a>
+</li>
+                                            <li role="presentation">
+    
+            
+<a role="menuitem"  id="keyboard-shortcuts-link" href="/docs" class="    "      title="View available keyboard shortcuts" >
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li role="presentation">
+    
+            
+<a role="menuitem"  id="feed-builder-link" href="/docs/configurerssfeed.action" class="    "      title="Create your custom RSS feed." >
+        Feed Builder
+</a>
+</li>
+                                            <li role="presentation">
+    
+            
+<a role="menuitem"  id="whats-new-menu-link" href="https://confluence.atlassian.com/display/DOC/Confluence+9.2+Release+Notes" class="    "   >
+        What’s new
+</a>
+</li>
+                                            <li role="presentation">
+    
+            
+<a role="menuitem"  id="confluence-about-link" href="/docs/aboutconfluencepage.action" class="    "      title="Get more information about Confluence" >
+        About Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a role="menuitem"  id="login-link" href="/docs/login.action?os_destination=%2Fspaces%2FROS%2Fpages%2F2555969%2FCertificates" class="   user-item login-link "   >
+        Log in
+</a>
+</li>
+                        
+    </li>
+    </ul>
+</div></div><!-- .aui-header-inner--><aui-header-end></aui-header-end></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar" role="complementary" aria-label=sidebar>
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="Edit space details"><a class="space-information-link" href="/docs/spaces/ROS/pages/328059/RouterOS" title="RouterOS"><div class="avatar"><div class="space-logo" data-key="ROS" data-name="RouterOS" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><img class="avatar-img" src="/docs/download/attachments/16351655/ROS?version=1&amp;modificationDate=1611314525238&amp;api=v2" alt=""></div></div></div></div><div class="space-information-container"><div class="name" title="RouterOS">RouterOS</div></div></a><button type="button" class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit" title="Edit space details" >Edit space details</button></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="page-tree"><div class="acs-nav-sections"><div class="main-links-section "><ul class="acs-nav-list"><li class="acs-nav-item wiki aui-iconfont-page current-item" aria-current="true" data-collector-key="spacebar-pages"><a class="acs-nav-item-link tipsy-enabled" href="/docs/collector/pages.action?key=ROS" data-collapsed-tooltip="Pages"><span class="aui-icon wiki aui-iconfont-page"></span><span class="acs-nav-item-label">Pages</span></a></li><li class="acs-nav-item blog aui-iconfont-quote" data-collector-key="spacebar-blogs"><a class="acs-nav-item-link tipsy-enabled" href="/docs/pages/viewrecentblogposts.action?key=ROS" data-collapsed-tooltip="Blog"><span class="aui-icon blog aui-iconfont-quote"></span><span class="acs-nav-item-label">Blog</span></a></li></ul></div><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="page-tree"><div class="ia-secondary-header"><h2 class="ia-secondary-header-title page-tree"><button id="page-tree-button" class="aui-button icon aui-icon aui-iconfont-location sidebar-flyout-button" aria-labelledby="page-tree-label" aria-haspopup="dialog"></button><span id="page-tree-label" class="label">Page tree</span></h2></div><div class="ia-secondary-content"><div class="plugin_pagetree conf-macro output-inline" data-hasbody="false" data-macro-name="pagetree">
+
+        
+        
+    <ul role="list" aria-busy="true" class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+        <div class="plugin_pagetree_children">
+        </div>
+    </ul>
+
+    <fieldset class="hidden">
+        <input type="hidden" name="treeId" value=""/>
+        <input type="hidden" name="treeRequestId" value="/docs/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false&amp;expandCurrent=true&amp;placement=sidebar"/>
+        <input type="hidden" name="treePageId" value="2555969"/>
+
+        <input type="hidden" name="noRoot" value="false"/>
+        <input type="hidden" name="rootPageId" value="328059"/>
+
+        <input type="hidden" name="rootPage" value=""/>
+        <input type="hidden" name="startDepth" value="0"/>
+        <input type="hidden" name="spaceKey" value="ROS"/>
+
+        <input type="hidden" name="i18n-pagetree.loading" value="Loading..."/>
+        <input type="hidden" name="i18n-pagetree.error.permission" value="Unable to load page tree. It seems that you do not have permission to view the root page."/>
+        <input type="hidden" name="i18n-pagetree.eeror.general" value="There was a problem retrieving the page tree. Please check the server log file for more information."/>
+        <input type="hidden" name="loginUrl" value="/docs/login.action?os_destination=%2Fpages%2Fviewpage.action%3FpageId%3D2555969%26spaceKey%3DROS%26title%3DCertificates&amp;permissionViolation=true"/>
+        <input type="hidden" name="mobile" value="false"/>
+        <input type="hidden" name="placement" value="sidebar"/>
+
+                <fieldset class="hidden">
+                                                <input type="hidden" name="ancestorId" value="119144604"/>
+                                    <input type="hidden" name="ancestorId" value="328059"/>
+                                    </fieldset>
+    </fieldset>
+</div></div></div></div><div class="hidden"><a href="/docs/collector/pages.action?key=ROS" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>Space Details</h2><div class="personal-space-logo-hint">Your profile picture is used as the logo for your personal space. <a href="/docs/users/profile/editmyprofilepicture.action" target="_blank">Change your profile picture</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="Browse pages" data-class="" data-href="/docs/pages/reorderpages.action?key=ROS">Browse pages</div></div><button id="space-tools-menu-trigger"  class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger><span class="aui-icon aui-icon-small aui-iconfont-configure">Configure</span><span class="aui-button-label">Space tools</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" hidden data-aui-alignment="top left"></div><a href="#" role="button" class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left" aria-expanded="true"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <main role="main" id="main" class=" aui-page-panel clearfix">
+                    
+        <div id="custom-content-header">
+            <h1><a name="Certificates-Thisdocumentationsitehasbeenfrozen,nofurthereditswillbemadehere!"></a>This documentation site has been frozen, no further edits will be made here!</h1>
+
+<p>The new RouterOS documentation site is available here: <span class="nobr"><a href="https://manual.mikrotik.com/docs/introduction/" class="external-link" rel="nofollow">https://manual.mikrotik.com/docs/introduction/<sup><img class="rendericon" src="/docs/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"/></sup></a></span></p>
+        </div>
+    
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view" role="region" aria-label="Page tools">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="More options" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="More options" role="button"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default confluence-dropdown2-scrollable"  role="menu" aria-labelledby="action-menu-link" >
+                            <div class="aui-dropdown2-section">
+                    <ul  id="action-menu-primary"                          class="section-primary first"                         role="presentation" >
+                                                    <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="view-attachments-link"                href="/docs/pages/viewpageattachments.action?pageId=2555969"
+                rel="nofollow"
+                class="action-view-attachments"
+                 accessKey="t"                 title="View Attachments"                                                 role="menuitem"                >
+
+                        <span>
+                                A<u>t</u>tachments (0)
+            </span>        </a>
+    </li>
+                                                <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="action-view-history-link"                href="/docs/pages/viewpreviousversions.action?pageId=2555969"
+                rel="nofollow"
+                class="action-view-history"
+                                                                                 role="menuitem"                >
+
+                        <span>
+                                Page History
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul  id="action-menu-secondary"                          class="section-secondary"                         role="presentation" >
+                                                    <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="view-page-info-link"                href="/docs/pages/viewinfo.action?pageId=2555969"
+                rel="nofollow"
+                class="action-view-info"
+                                                                                 role="menuitem"                >
+
+                        <span>
+                                Page Information
+            </span>        </a>
+    </li>
+                                                <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="view-resolved-comments"                href="/docs"
+                rel="nofollow"
+                class=""
+                                                                                 role="menuitem"                >
+
+                        <span>
+                                Resolved comments
+            </span>        </a>
+    </li>
+                                                <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="view-in-hierarchy-link"                href="/docs/pages/reorderpages.action?key=ROS&amp;openId=2555969#selectedPageInHierarchy"
+                rel="nofollow"
+                class=""
+                                                                                 role="menuitem"                >
+
+                        <span>
+                                View in Hierarchy
+            </span>        </a>
+    </li>
+                                                <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="action-view-source-link"                href="/docs/plugins/viewsource/viewpagesrc.action?pageId=2555969"
+                rel="nofollow"
+                class="action-view-source popup-link"
+                                                                                 role="menuitem"                >
+
+                        <span>
+                                View Source
+            </span>        </a>
+    </li>
+                                                <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="action-export-pdf-link"                href="/docs/spaces/flyingpdf/pdfpageexport.action?pageId=2555969&amp;atl_token=117e2a649c992b617eb8858f7e1c1b7134e06b57"
+                rel="nofollow"
+                class=""
+                                                                                 role="menuitem"                >
+
+                        <span>
+                                Export to PDF
+            </span>        </a>
+    </li>
+                                                <li
+                    role="presentation"
+            >
+
+    
+        
+    
+                                                                        
+    
+    
+            <a  id="action-export-word-link"                href="/docs/exportword?pageId=2555969"
+                rel="nofollow"
+                class="action-export-word"
+                                                                                 role="menuitem"                >
+
+                        <span>
+                                Export to Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <nav aria-label="Breadcrumbs">
+        <ol id="breadcrumbs">
+                                                            
+                                
+            <li class="first" >
+                                
+                                    <span class=""><a href="/docs/collector/pages.action?key=ROS">Pages</a></span>
+                                                                                                                    
+                                
+            <li>
+                                
+                                    <span class=""><a href="/docs/spaces/ROS/pages/328059/RouterOS">RouterOS</a></span>
+                                                                                                                    
+                                
+            <li>
+                                
+                                    <span class=""><a href="/docs/spaces/ROS/pages/119144604/Authentication+Authorization+Accounting">Authentication, Authorization, Accounting</a></span>
+                                                                                                    </ol>
+    </nav>
+
+
+                    </div>
+                
+                
+                
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" aria-label="Unrestricted" data-tooltip="Unrestricted" id="content-metadata-page-restrictions-hidden"  class="hidden"></a></li><li class="page-metadata-item noprinthas-button"  id="content-metadata-jira-wrapper"><a href=""  id="content-metadata-jira"  class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>Jira links</span></a></li></ul></div>
+        
+
+                                    <div id="title-text" class="with-breadcrumbs">
+                                    <a href="/docs/spaces/ROS/pages/2555969/Certificates"><h1>Certificates</h1></a>
+                        </div>
+                            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+    
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/docs/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <div class="page-metadata">
+    <ul>
+        <li class="page-metadata-modification-info">
+            
+        
+    
+    
+        
+    
+        
+            
+            Created by <span class='author'>     <a href="    /docs/display/~artursc
+"
+            aria-label="created by Artūrs C."                       class="url fn"
+                            >Artūrs C.</a></span>, last updated by <span class='editor'>     <a href="    /docs/display/~rodions
+"
+            aria-label="last.updated.by Rodions M."                       class="url fn"
+                            >Rodions M.</a></span> on <a class='last-modified' aria-label='modified on Apr 16, 2026, select to show changes' title='Show changes' href='/docs/pages/diffpagesbyversion.action?pageId=2555969&amp;selectedPageVersions=55&amp;selectedPageVersions=56'>Apr 16, 2026</a>
+    
+            <span class="read-time">
+            8 minute read
+        </span>
+            </li>
+    </ul>
+</div>
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <h1 class="auto-cursor-target" id="Certificates-Overview">Overview</h1><p><div class="toc-macro client-side-toc-macro conf-macro output-block" data-headerelements="H1,H2,H3,H4,H5,H6,H7" data-hasbody="false" data-macro-name="toc"></div></p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">/certificate</pre>
+</div></div><p style="text-align: left;">The general menu is used to manage certificates, add templates, issue certificates, and manage CRL and SCEP Clients.</p><h2 style="text-align: left;" id="Certificates-CertificateTemplate">Certificate Template</h2><p style="text-align: left;">Certificate templates are used to prepare a desired certificate for signing.</p><p style="text-align: left;">Certificate template is deleted right after a certificate is signed or a certificate request command is executed</p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">/certificate
+add name=CA-Template common-name=CAtemp key-usage=key-cert-sign,crl-sign
+add name=Server common-name=server
+add name=Client common-name=client</pre>
+</div></div><p><span style="letter-spacing: 0.0px;">To print out certificates:</span></p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">[admin@4k11] /certificate&gt; print detail 
+Flags: K - private-key; L - crl; C - smart-card-key; A - authority; I - issued, R - revoked; E - expired; T - trusted 
+ 0         name=&quot;CA-Template&quot; key-type=rsa common-name=&quot;CAtemp&quot; key-size=2048 subject-alt-name=&quot;&quot; days-valid=365 key-usage=key-cert-sign,crl-sign 
+
+ 1         name=&quot;Server&quot; key-type=rsa common-name=&quot;server&quot; key-size=2048 subject-alt-name=&quot;&quot; days-valid=365 
+           key-usage=digital-signature,key-encipherment,data-encipherment,key-cert-sign,crl-sign,tls-server,tls-client 
+
+ 2         name=&quot;Client&quot; key-type=rsa common-name=&quot;client&quot; key-size=2048 subject-alt-name=&quot;&quot; days-valid=365 
+           key-usage=digital-signature,key-encipherment,data-encipherment,key-cert-sign,crl-sign,tls-server,tls-client </pre>
+</div></div><h3 class="auto-cursor-target" id="Certificates-Certificatetemplateproperties">Certificate template properties</h3><p>During the certificate template creation process, it is possible define and configure multiple parameters to meet specific requirements.</p><div class="table-wrap"><table class="relative-table wrapped confluenceTable" style="width: 79.2549%;"><colgroup class=""><col class="" style="width: 51.3369%;"/><col class="" style="width: 48.6631%;"/></colgroup><tbody class=""><tr class=""><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr><tr class=""><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>common-name</strong><span> </span>(<em>string</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate common name</td></tr><tr><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>copy-from<span> </span></strong>(<em>name</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate name from which to copy general settings</td></tr><tr class=""><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>country</strong><span> </span>(<em>string</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate issuer country</td></tr><tr><td class="confluenceTd"><span><strong>days-valid </strong>(days Default: 365)</span></td><td class="confluenceTd">Days certificate will be valid after signing</td></tr><tr class=""><td class="confluenceTd"><span><strong>digest-algorithm</strong> </span><span style="color:var(--ds-text,#172b4d);">(<em style="text-align: left;">md5 | sha1 | sha256 | sha384 | sha512</em></span><span style="color:var(--ds-text,#172b4d);"> Default: <strong>sha256</strong><em style="text-align: left;"> </em></span><span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd">Certificate public key algorithm</td></tr><tr><td class="confluenceTd"><span><strong>key-size</strong> </span><span style="color:var(--ds-text,#172b4d);">(1024 | 1536 | 2048 | 4096 | 8192 | prime256v1 | secp384r1 | secp521r1</span><span style="color:var(--ds-text,#172b4d);"> Default: <strong>2048</strong></span><span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd">Certificate public key size</td></tr><tr><td class="confluenceTd"><p><span><strong>key-usage </strong><span style="color:var(--ds-text,#172b4d);">(code-sign | crl-sign | decipher-only | dvcs | encipher-only     key-cert-sign | ocsp-sign | tls-client | </span></span><span><span style="color:var(--ds-text,#172b4d);">content-commitment | data-encipherment | digital-signature | email-protect | key-agreement | key-encipherment | timestamp | tls-server</span><strong><span style="color:var(--ds-text,#172b4d);"> </span></strong><span style="color:var(--ds-text,#172b4d);">Default:</span><strong><span style="color:var(--ds-text,#172b4d);"> digital-signature,key-encipherment,data-encipherment,key-cert-sign,crl-sign,tls-server,tls-client</span><span style="color:var(--ds-text,#172b4d);">)</span></strong></span></p></td><td class="confluenceTd">Certificate usage</td></tr><tr><td class="confluenceTd"><p><span><strong>locality </strong>(<em>string</em>)</span></p></td><td class="confluenceTd">Certificate issuer locality</td></tr><tr><td class="confluenceTd"><p><strong>name </strong>(<em>string</em>)</p></td><td class="confluenceTd">Certificate name</td></tr><tr><td class="confluenceTd"><p><strong>organization </strong>(<em>string</em>)</p></td><td class="confluenceTd">Certificate issuer organization</td></tr><tr><td class="confluenceTd"><p><strong>state </strong>(<em>string</em>)</p></td><td class="confluenceTd">Certificate issuer state</td></tr><tr><td class="confluenceTd"><p><strong>subject-alt-name </strong><span style="color:var(--ds-text,#172b4d);">(<em style="text-align: left;">DNS: | IP: | email:</em></span><span style="color:var(--ds-text,#172b4d);">)</span></p></td><td class="confluenceTd">Certificate subject alternative name</td></tr><tr><td class="confluenceTd"><p><strong>trusted</strong> <span style="color:var(--ds-text,#172b4d);">(<em style="text-align: left;">no | yes </em></span><span style="color:var(--ds-text,#172b4d);">)</span></p></td><td class="confluenceTd">Wherever to trust certificate. If <em>yes, </em>certificate will be used for host certificate verification.</td></tr><tr><td class="confluenceTd"><p><strong>trust-store </strong>(<em>all </em>| <em>capsman </em>| <em>dns </em>| <em>email </em>| <em>ipsec </em>| <em>mqtt </em>| <em>openflow </em>| <em>radius </em>| <em>sstp </em>| <em>userman </em>| <em>www </em>| <em>api </em>| <em>container</em> | <em>dot1x </em>| <em>fetch </em>| <em>lora </em>| <em>netwatch </em>| <em>ovpn</em> | <em>tr069</em> | <em>wpa-eap</em> Default: <strong>all</strong>)</p></td><td class="confluenceTd"><p>Specify service which can use a specific certificate for certificate verification or trust-chain creation (www, sstp).</p></td></tr><tr><td class="confluenceTd"><p><strong>unit </strong>(<em>string</em>)</p></td><td class="confluenceTd">Certificate issuer organizational unit</td></tr></tbody></table></div><h2 class="auto-cursor-target" id="Certificates-Certificateproperties">Certificate properties</h2><p>For a signed certificate, most properties are read-only, with the exception of <em>name, trusted</em>, and <em>trust-store</em>.</p><div class="table-wrap"><table class="relative-table wrapped confluenceTable" style="width: 79.2549%;"><colgroup class=""><col class="" style="width: 51.354%;"/><col class="" style="width: 48.6373%;"/></colgroup><tbody class=""><tr class=""><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr><tr><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>acme-status</strong> <em>(string)</em></td><td style="text-align: left;vertical-align: top;" class="confluenceTd">ACME client status</td></tr><tr><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>common-name</strong><span> </span>(<em>string</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate common name</td></tr><tr><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>copy-from<span> </span></strong>(<em>name</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate name from which to copy general settings</td></tr><tr><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>country</strong><span> </span>(<em>string</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate issuer country</td></tr><tr><td class="confluenceTd"><span><strong>days-valid </strong>(days)</span></td><td class="confluenceTd">Days certificate will be valid after signing</td></tr><tr><td class="confluenceTd"><span><strong>digest-algorithm</strong> </span><span style="color:var(--ds-text,#172b4d);">(<em style="text-align: left;">md5 | sha1 | sha256 | sha384 | sha512</em></span><span style="color:var(--ds-text,#172b4d);"><em style="text-align: left;"> </em></span><span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd">Certificate public key algorithm</td></tr><tr><td class="confluenceTd"><span><strong>directory-url </strong><em>(string)</em></span></td><td class="confluenceTd">ACME client directory URL</td></tr><tr><td class="confluenceTd"><span><strong>domain-names </strong><em>(string)</em></span></td><td class="confluenceTd">ACME client used domain names</td></tr><tr><td class="confluenceTd"><span><strong>key-size</strong> </span><span style="color:var(--ds-text,#172b4d);">(1024 | 1536 | 2048 | 4096 | 8192 | prime256v1 | secp384r1 | secp521r1</span><span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd">Certificate public key size</td></tr><tr><td class="confluenceTd"><p><span><strong>key-usage </strong><span style="color:var(--ds-text,#172b4d);">(code-sign | crl-sign | decipher-only | dvcs | encipher-only     key-cert-sign | ocsp-sign | tls-client | </span></span><span><span style="color:var(--ds-text,#172b4d);">content-commitment | data-encipherment | digital-signature | email-protect | key-agreement | key-encipherment | timestamp | tls-server)</span></span></p></td><td class="confluenceTd">Certificate usage</td></tr><tr><td class="confluenceTd"><p><span><strong>locality </strong>(<em>string</em>)</span></p></td><td class="confluenceTd">Certificate issuer locality</td></tr><tr><td class="confluenceTd"><p><strong>organization </strong>(<em>string</em>)</p></td><td class="confluenceTd">Certificate issuer organization</td></tr><tr><td class="confluenceTd"><p><strong>revoked </strong><em>(date)</em></p></td><td class="confluenceTd">Certificate revoke time (only for certificates that are signed and revoked in specific device)</td></tr><tr><td class="confluenceTd"><p><strong>state </strong>(<em>string</em>)</p></td><td class="confluenceTd">Certificate issuer state</td></tr><tr><td class="confluenceTd"><p><strong>subject-alt-name </strong><span style="color:var(--ds-text,#172b4d);">(<em style="text-align: left;">DNS | IP | email</em></span><span style="color:var(--ds-text,#172b4d);">)</span></p></td><td class="confluenceTd">Certificate subject alternative name</td></tr><tr><td class="confluenceTd"><p><strong>trusted</strong> <span style="color:var(--ds-text,#172b4d);">(<em style="text-align: left;">no | yes</em></span><span style="color:var(--ds-text,#172b4d);">)</span></p></td><td class="confluenceTd">Wherever to trust certificate. If <em>yes, </em>certificate will be used for host certificate verification.</td></tr><tr><td class="confluenceTd"><p><strong>trust-store </strong>(<em>all </em>| <em>capsman </em>| <em>dns </em>| <em>email </em>| <em>ipsec </em>| <em>mqtt </em>| <em>openflow </em>| <em>radius </em> | <em>sstp </em>| <em>userman </em>| <em>www </em>| <em>api </em>| <em>container</em> | <em>dot1x </em>| <em>fetch </em>| <em>lora </em>| <em>netwatch </em>| <em>ovpn</em> | <em>tr069</em> | <em>wpa-eap</em>)</p></td><td class="confluenceTd"><p>Specify service which can use a specific certificate for certificate verification or trust-chain creation (www, sstp).</p></td></tr><tr><td class="confluenceTd"><p><strong>unit </strong>(<em>string</em>)</p></td><td class="confluenceTd">Certificate issuer organizational unit</td></tr><tr class=""><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>serial-number</strong> (<em>string</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate serial number</td></tr><tr class=""><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong><span>fingerprint </span></strong>(<em>string</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate fingerprint</td></tr><tr class=""><td style="text-align: left;vertical-align: top;" class="confluenceTd"><strong>akid </strong>(<em>string</em>)</td><td style="text-align: left;vertical-align: top;" class="confluenceTd">Certificate authority ID</td></tr><tr class=""><td class="confluenceTd"><strong>skid </strong>(<em>string</em>)</td><td class="confluenceTd">Certificate subject ID</td></tr><tr><td class="confluenceTd"><strong>issuer </strong>(<em>string</em>)</td><td class="confluenceTd">Certificate Authority </td></tr><tr class=""><td class="confluenceTd"><strong>invalid-before</strong> <em>(date)</em></td><td class="confluenceTd">Date and time before which a certificate expired</td></tr><tr class=""><td class="confluenceTd"><strong>invalid-after </strong><em>(date)</em></td><td class="confluenceTd">Date and time after which a certificate expired</td></tr><tr class=""><td class="confluenceTd"><p><strong>expires-after </strong><em>(time)</em></p></td><td class="confluenceTd">Time left before expiration</td></tr><tr class=""><td class="confluenceTd"><strong>key-type </strong><span style="color:var(--ds-text,#172b4d);">(string)</span></td><td class="confluenceTd">Private key ype</td></tr><tr class=""><td class="confluenceTd"><strong>ca </strong><em>(string)</em></td><td class="confluenceTd">CA certificate name (shown only for certificates that are signed in specific device)</td></tr></tbody></table></div><div role="region" aria-label="Note" class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note"><span role="presentation" class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>If the CA certificate is removed, all issued certificates in the chain are also removed.</p></div></div><h2 id="Certificates-SignCertificate">Sign Certificate</h2><p>Certificates should be signed. In the following example, we will sign certificates and add CRL URL for the server certificate:</p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">/certificate 
+sign CA-Template 
+sign Client      
+sign Server ca-crl-host=192.168.88.1 name=ServerCA
+</pre>
+</div></div><p class="auto-cursor-target">Let`s check is the certificates are signed:</p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">[admin@MikroTik] /certificate&gt; print
+Flags: K - private-key; L - crl; A - authority; T - trusted
+Columns: NAME, COMMON-name, FINGERPRINT
+#        NAME         COMMON  FINGERPRINT                                                     
+0  K AT  CA-Template  CAtemp  0c7aaa7607a4dde1bbf33deaae6be7bac9fe4064ba47d64e8a73dcefad6cfc38
+1  K AT  Client       client  b3ff25ecb166ea41e15733a7493003f3ea66310c10390c33e98fe32364c3659f
+2  KLAT  ServerCA     server  152b88c9d81f4b765a59e2302e01efd1fbf11ceeed6e59f4974e87787a5bb980
+</pre>
+</div></div><p class="auto-cursor-target">For a video example click <a class="external-link" href="http://youtube.com/watch?v=i2A3YIQKfwY" rel="nofollow">here.</a></p><div role="region" aria-label="Note" class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note"><span role="presentation" class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>The time of the key signing process depends on the key size of a specific certificate. With values of 4k and higher, it might take a substantial time to sign this specific certificate on less powerful CPU-based devices.</p></div></div><p><br/></p><h2 id="Certificates-ExportCertificate">Export Certificate</h2><p>It is possible to export client certificates with keys and CA certificates in two formats - PEM or PCKS12.</p><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup class=""><col class=""/><col class=""/></colgroup><tbody class=""><tr class=""><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr><tr class=""><td class="confluenceTd"><strong style="text-align: left;">export-passphrase </strong><span style="color:var(--ds-text,#172b4d);">(</span><em style="text-align: left;">string</em> Default: none<span style="color:var(--ds-text,#172b4d);">) <em><a href="https://help.mikrotik.com/docs/spaces/ROS/pages/380076066/List+of+menus+with+sensitive+parameters" rel="nofollow">sensitive</a></em></span></td><td class="confluenceTd">Passphrase that will be used for exported certificate private key encryption.</td></tr><tr class=""><td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>file-name </strong>(</span><em style="text-align: left;">string </em>Default: cert_export_[Certificate name].crt/key/pkcs12<span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd">Exported certificate file name.</td></tr><tr class=""><td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>type </strong>(</span><em style="text-align: left;">pem | pkcs12</em> Default: pem<span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd"><p>Exported certificate type.</p><p>In case of PEM, certificate will be exported with CRT extension, if export-passphrase is specified, also encrypted private KEY file will be exported.</p><p>In case of PKCS12, certificate will be exported with P12 extension, if export-passphrase is specified, exported certificate will contain encryted private key.</p></td></tr></tbody></table></div><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">/certificate 
+export-certificate CA-Template 
+export-certificate ServerCA export-passphrase=yourpassphrase
+export-certificate Client export-passphrase=yourpassphrase</pre>
+</div></div><p>Exported certificates are available under the <em>/file</em> section:</p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">[admin@MikroTik] &gt; file print
+Columns: NAME, TYPE, SIZE, CREATION-TIME
+#  NAME                         TYPE        SIZE  CREATION-TIME       
+0  skins                        directory         jan/19/2019 00:00:04
+1  flash                        directory         jan/19/2019 01:00:00
+2  pub                          directory         jan/19/2019 02:42:16
+3  cert_export_CA-Template.crt  .crt file   1119  jan/19/2019 04:15:21
+4  cert_export_ServerCA.crt     .crt file   1229  jan/19/2019 04:15:42
+5  cert_export_ServerCA.key     .key file   1858  jan/19/2019 04:15:42
+6  cert_export_Client.crt       .crt file   1164  jan/19/2019 04:15:55
+7  cert_export_Client.key       .key file   1858  jan/19/2019 04:15:55</pre>
+</div></div><div role="region" aria-label="Note" class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note"><span role="presentation" class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Exporting certificates requires &quot;sensitive&quot; user policy.</p></div></div><h2 id="Certificates-ImportCertificate">Import Certificate</h2><p>To import certificates, certificates must be uploaded to a device using one of the file upload methods.</p><p>Certificates must be imported as a file.</p><p>Supported are <span style="color:var(--ds-text,#172b4d);">PEM, DER, CRT, PKCS12 formats.</span></p><div class="table-wrap"><table class="wrapped relative-table confluenceTable" style="width: 72.6703%;"><colgroup class=""><col class="" style="width: 44.8406%;"/><col class="" style="width: 55.1158%;"/></colgroup><tbody class=""><tr class=""><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr><tr class=""><td class="confluenceTd"><strong style="text-align: left;">name</strong><span style="color:var(--ds-text,#172b4d);"> </span><span style="color:var(--ds-text,#172b4d);">(</span><em style="text-align: left;">string</em> Default: file-name_number<span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd">A certificate name that will be shown in the certificate manager</td></tr><tr class=""><td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>file-name </strong>(</span><em style="text-align: left;">string</em><span style="color:var(--ds-text,#172b4d);">)</span></td><td class="confluenceTd">A file name that will be imported</td></tr><tr class=""><td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>passphrase </strong>(</span><em style="text-align: left;">string</em> Default: none<span style="color:var(--ds-text,#172b4d);">) <em><a href="https://help.mikrotik.com/docs/spaces/ROS/pages/380076066/List+of+menus+with+sensitive+parameters" rel="nofollow">sensitive</a></em></span></td><td class="confluenceTd">File passphrase if there is such</td></tr><tr><td class="confluenceTd"><strong>trusted</strong><span> </span>(<em>yes | no</em><span> </span>Default: yes)</td><td class="confluenceTd">Adds<span> </span><em>trusted</em><span> </span>flag for imported certificate</td></tr><tr><td class="confluenceTd"><p><strong>trust-store </strong>(<em>all </em>| <em>capsman </em>| <em>dns </em>| <em>email </em>| <em>ipsec </em>| <em>mqtt </em>| <em>openflow </em>| <em>radius </em>| | <em>sstp </em>| <em>userman </em>| <em>www </em>| <em>api </em>| <em>container</em> | <em>dot1x </em>| <em>fetch </em>| <em>lora </em>| <em>netwatch </em>| <em>ovpn</em> | <em>tr069</em> | <em>wpa-eap</em> Default: <strong>all</strong>)</p></td><td class="confluenceTd"><p>Specify service which can use a specific certificate for certificate verification or trust-chain creation (www, sstp).</p></td></tr></tbody></table></div><p><br/></p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">[admin@MikroTik] &gt; /certificate/import file-name=certificate_file_name name=name_example passphrase=file_passphrase
+     certificates-imported: 2
+     private-keys-imported: 1
+            files-imported: 1
+       decryption-failures: 0
+  keys-with-no-certificate: 0
+
+[admin@MikroTik] &gt; /certificate/print 
+Flags: K - PRIVATE-KEY; T - TRUSTED
+Columns: NAME, COMMON-NAME
+#    NAME            COMMON-NAME                                                  
+0 KT name_example    cert    
+1  T name_example_1  ca   </pre>
+</div></div><h2 class="auto-cursor-target" id="Certificates-Settingssettings">Settings<span class="confluence-anchor-link conf-macro output-inline" id="Certificates-settings" data-hasbody="false" data-macro-name="anchor"></span></h2><p><em>/certificate settings </em>allows configuring Certificate Revocation List (CRL) settings.</p><p>By default, CRL is not utilized, and certificates are not verified for revocation status.</p><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup class=""><col class=""/><col class=""/></colgroup><tbody class=""><tr class=""><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr><tr><td class="confluenceTd"><strong>builtin-trust-store</strong> (<em>all </em>| <em>default</em> | <em>capsman </em>| <em>dns </em>| <em>email </em>| <em>ipsec </em>| <em>mqtt </em>| <em>openflow </em>| <em>radius </em>| | <em>sstp </em>| <em>userman </em>| <em>www </em>| <em>api </em>| <em>container</em> | <em>dot1x </em>| <em>fetch </em>| <em>lora </em>| <em>netwatch </em>| <em>ovpn</em> | <em>tr069</em> | <em>wpa-eap |</em> <em>untrusted</em> Default: <strong><em>default</em></strong>)</td><td class="confluenceTd"><p>Services that can use <a href="#Certificates-builtin">built-in trust store&nbsp;authorities</a> for certificate verification.</p><p>The current defaults:</p><ul><li data-uuid="a3b73cfc-58a2-4d5a-b7b0-c4f0550f4c13">fetch</li><li data-uuid="6783f69e-083b-44a1-8f2d-c6c0b0d6987d">mqtt</li><li data-uuid="0810fc73-d61a-4b54-b41f-dfbdeda5cb49">email</li><li data-uuid="aef0ad68-ff3e-467a-9ea1-79028808088b">netwatch</li><li data-uuid="071ccb1e-d5a6-40e6-946e-a4e1addfd67a">container</li><li data-uuid="7352a96d-c37a-4d99-879c-d14a15dcc94d">lora</li><li data-uuid="0d9cee4b-1206-415a-80dd-9dab5609a5b9">dns</li><li data-uuid="60e23352-c65f-47eb-a64f-ef2650b68278">www</li><li data-uuid="664169b0-020e-46ef-852a-1c862a1249d4">reverse-proxy</li></ul></td></tr><tr class=""><td class="confluenceTd"><strong>crl-download </strong>(<em>yes | no</em><span> </span>Default: <strong>no</strong>)</td><td class="confluenceTd">Whether to automatically download/update CRL</td></tr><tr class=""><td class="confluenceTd"><strong>crl-store </strong>(<em>ram | sytem</em><span> </span>Default: <strong>ram</strong>)</td><td class="confluenceTd"><p>Where to store downloaded CRL information</p><p><span style="color:var(--ds-text,#333333);">CRL will be automatically renewed every hour for certificates which have &quot;trusted=yes&quot; using http protocol (ldap and ftp is currently unsupported)</span></p></td></tr><tr class=""><td class="confluenceTd"><strong>crl-use </strong>(<em>yes | no</em><span> </span>Default: no)</td><td class="confluenceTd">Whether to use CRL</td></tr></tbody></table></div><div role="region" aria-label="Note" class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note"><span role="presentation" class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>If<span>&nbsp;</span><em>/certificate/settings/set crl-use</em><span>&nbsp;</span>is set to&nbsp;<em>yes,</em><span>&nbsp;</span>RouterOS will check CRL for each certificate in a certificate chain, therefore, an entire certificate chain should be installed into a device - starting from Root CA, intermediate CA (if there are such), and certificate that is used for specific service.</p></div></div><p class="auto-cursor-target">An <a class="external-link" href="http://youtube.com/watch?v=q9oMO3_jvBU" rel="nofollow">example</a> on importing a root certificate.</p><h1 class="auto-cursor-target" id="Certificates-ACMEclient">ACME client</h1><p>The ACME client automates the acquisition and renewal of multiple TLS certificates via ACME.</p><p>To add a new ACME client via CLI, use the command /certificate add-acme.</p><p>Existing ACME clients appear in the Certificates view and are marked with the <em>a </em>(acme-manage) flag.</p><p>Domain names must resolve to the router, and TCP port 80 must be accessible from the WAN (HTTP-01 challange is used). For <a class="external-link" href="http://example.sn.mynetname.net" rel="nofollow">example.sn.mynetname.net</a> domain name, DNS-01 challange is used.</p><p>Certificates are automatically renewed when 80% of their validity period has elapsed.</p><p>If the certificate is not retrieved during the initial setup, a new ACME client must be added.</p><h2 id="Certificates-Properties">Properties</h2><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th scope="col" class="confluenceTh">Property</th><th scope="col" class="confluenceTh">Description</th></tr><tr><td class="confluenceTd"><span><strong>directory-url</strong> </span>(<em>string</em>)</td><td class="confluenceTd">ACME directory URL</td></tr><tr><td class="confluenceTd"><strong>domain-names</strong> (<em>string</em>)</td><td class="confluenceTd">comma separated list of domain names</td></tr><tr><td class="confluenceTd"><strong><span>eab-hmac-key </span></strong>(<em>string</em>)</td><td class="confluenceTd"><span style="color:var(--ds-text,#333333);">HMAC key for ACME External Account Binding</span></td></tr><tr><td class="confluenceTd"><strong>eab-kid</strong> (<em>string</em>)</td><td class="confluenceTd"><span style="color:var(--ds-text,#333333);">Key identifier</span></td></tr><tr><td class="confluenceTd"><strong>name</strong> (<em>string</em>)</td><td class="confluenceTd">ACME client name</td></tr></tbody></table></div><p><br/></p><h2 class="auto-cursor-target" id="Certificates-Let&#39;sEncryptcertificate">Let's Encrypt certificate</h2><p class="auto-cursor-target">To retrieve Let's Encrypt certificate with automatic certificate renewal, must manually provide ACME directory URL (<a class="external-link" href="https://acme-v02.api.letsencrypt.org/directory" rel="nofollow">https://acme-v02.api.letsencrypt.org/directory</a>) and domain-name.</p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">/certificate/add-acme directory-url=https://acme-v02.api.letsencrypt.org/directory domain-names=[DOMAIN_NAME]</pre>
+</div></div><p>To generate Let's Encrypt certificate for /<em>ip cloud</em> name (ie. <a class="external-link" href="http://example.sn.mynetname.net" rel="nofollow">example.sn.mynetname.net</a>), as domain-name provide <em>dns-name </em>from <em>/ip/cloud </em>menu or use &quot;<em>[/ip/cloud/get dns-name]</em>&quot;</p><div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: ros; gutter: false">/certificate/add-acme directory-url=https://acme-v02.api.letsencrypt.org/directory domain-names=[/ip/cloud/get dns-name]</pre>
+</div></div><h1 class="auto-cursor-target" id="Certificates-SCEP">SCEP</h1><p>SCEP is using HTTP protocol and base64 encoded GET requests. Most of the requests are without authentication and cipher, however, important ones can be protected if necessary (ciphered or signed using a received public key).</p><p>SCEP client in RouterOS will:</p><ul><li>get CA certificate from CA server or RA (if used);</li><li>user should compare the fingerprint of the CA certificate or if it comes from the right server;</li><li>generate a self-signed certificate with a temporary key;</li><li>send a certificate request to the server;</li><li>if the server responds with status x, then the client keeps requesting until the server sends an error or approval.</li></ul><p>The SCEP server supports the issuance of one certificate only. RouterOS supports also renew and next-ca options:</p><ul><li>renew - the possibility to renew the old certificate automatically with the same CA.</li><li>next-ca - possibility to change the current CA certificate to the new one.</li></ul><p>The client polls the server for any changes, if the server advertises that the next-ca is available, then the client may request the next CA or wait until CA almost expires and then request the next-ca.</p><p>The RouterOS client by default will try to use POST, AES, and SHA256 if the server advertises that. If the above algorithms are not supported, then the client will try to use 3DES, DES and SHA1, MD5.</p><p>SCEP certificates are renewed when 3/4 of their validity time has passed.</p><p><br/></p><h1 id="Certificates-builtinBuilt-intruststoreauthorities"><span class="confluence-anchor-link conf-macro output-inline" id="Certificates-builtin" data-hasbody="false" data-macro-name="anchor"></span>Built-in trust store authorities</h1><p>RouterOS contains list of built-in root certificate authorities that specific services can use for host certificate verification.</p><p>List of services that can use built-in root certificate authorities can be found <a href="#Certificates-settings">here</a>.</p><p>It is possible to use <a href="/docs/spaces/ROS/pages/37748767/DNS#DNS-doh">DoH</a>, download <a href="/docs/spaces/ROS/pages/37748767/DNS#DNS-adlist"> Adlist </a>from URL or use <a href="/docs/spaces/ROS/pages/8978514/Fetch">fetch tool </a>with certificate validation without the need to manually import the relevant root certificate.</p><p>The list of built-in root certificate authorities is accessible in System → Certificates → Built In CA</p><p><br/></p><p><br/></p>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="2555969" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+                    
+        <li class="aui-label " data-label-id="131956737"><a class="aui-label-split-main" href="/docs/label/ROS/letsencrypt" rel="tag">letsencrypt</a></li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="Overview" data-href="/docs/spaces/viewspacesummary.action?key=ROS">Overview</div>
+            <div data-label="Content Tools" data-href="/docs/pages/reorderpages.action?key=ROS">Content Tools</div>
+    </div>
+        
+
+
+
+
+        <div id="sidebar-container">
+                                                                </div><!-- \#sidebar-container -->
+
+            </main><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">Powered by <a href="https://www.atlassian.com/software/confluence" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>9.2.21</span></li>
+            <li class="print-only">Printed by Atlassian Confluence 9.2.21</li>
+            <li class="noprint"><a href="https://support.atlassian.com/confluence-server/" class="hover-footer-link" rel="nofollow">Report a bug</a></li>
+            <li class="noprint"><a href="https://www.atlassian.com/company" class="hover-footer-link" rel="nofollow">Atlassian News</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="https://www.atlassian.com/" rel="nofollow">Atlassian</a></div>
+
+                    <script>
+  AJS.toInit(function(){
+    if (AJS.params.remoteUser == ''){
+      AJS.$("#space-tools-menu-trigger").hide();
+    }
+  });
+</script>
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 97, "requestCorrelationId": "4013731ef083d9b6"}</span>
+</body>
+</html>
+    

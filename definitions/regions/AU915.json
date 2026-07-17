@@ -1,0 +1,24 @@
+{
+  "id": "AU915",
+  "name": "AU915 (915-928 MHz)",
+  "description": "Australia ISM band. ChirpStack commonly runs sub-band 2 (channels 8-15) for an 8-channel gateway.",
+  "band": "AU915",
+  "defaultSubBand": 2,
+  "channelPlan": {
+    "radios": [{ "freq": 917200000 }, { "freq": 917900000 }],
+    "multiSF": [
+      { "radio": 0, "if": -400000 },
+      { "radio": 0, "if": -200000 },
+      { "radio": 0, "if": 0 },
+      { "radio": 0, "if": 200000 },
+      { "radio": 1, "if": -300000 },
+      { "radio": 1, "if": -100000 },
+      { "radio": 1, "if": 100000 },
+      { "radio": 1, "if": 300000 }
+    ],
+    "loraStd": { "radio": 0, "if": 300000, "bandwidth": 500000, "spreadFactor": 8 },
+    "fsk": null,
+    "rx2": { "freq": 923300000, "dr": 8 }
+  },
+  "notes": "Sub-band 2: 125 kHz channels 916.8-918.2 MHz (channels 8-15) plus the 500 kHz channel 917.5 MHz (SF8BW500). RX2 923.3 MHz SF12BW500 (DR8). Match the ChirpStack region and sub-band exactly."
+}

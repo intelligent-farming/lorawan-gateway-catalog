@@ -1,0 +1,52 @@
+{
+  "$comment": "Enumerates the config methods (how an operator applies a config to a gateway) and the packet forwarders (the config format), plus the legal {{TOKEN}} set for each forwarder. The conformance suite and src/lint.ts enforce that a template uses only tokens declared here, and that every rendered output leaves no token unfilled. Token `source` says where renderConfig's caller gets the value: `connection` = from the ChirpStack connection params the operator supplies; `region` = merged from definitions/regions/<id>.json by configScript/renderRadioBlock. `required` tokens must resolve to a value; tokens with a `default` are filled with it when the caller omits them.",
+  "configMethods": {
+    "web-ui": {
+      "name": "Vendor web admin UI",
+      "description": "Log in to the gateway's web interface and set the packet-forwarder fields by hand. The gateway.json config.<method>.path names the menu location."
+    },
+    "forwarder-file": {
+      "name": "Packet-forwarder config file",
+      "description": "Write the rendered config to the packet forwarder's config file on the gateway (SSH/SFTP or the web UI's file upload). The gateway.json config.<forwarder>.forwarderFilePath names the on-box path."
+    },
+    "ssh-cli": {
+      "name": "SSH / CLI",
+      "description": "Apply the config over an SSH or vendor CLI session (e.g. RouterOS, Kerlink CLI)."
+    }
+  },
+  "packetForwarders": {
+    "semtech-udp": {
+      "name": "Semtech UDP packet forwarder",
+      "description": "The classic Semtech UDP protocol (lora_pkt_fwd / SX1302 HAL packet forwarder). Reads a global_conf.json. Point it at the ChirpStack Gateway Bridge UDP backend (default port 1700).",
+      "templateSuffix": ".tmpl.json",
+      "format": "json",
+      "target": "ChirpStack Gateway Bridge — Semtech UDP backend (UDP, default port 1700)",
+      "tokens": {
+        "SERVER_ADDRESS": { "source": "connection", "required": true, "description": "Hostname or IP of the ChirpStack Gateway Bridge." },
+        "SERVER_PORT_UP": { "source": "connection", "required": true, "default": 1700, "description": "Uplink UDP port on the Gateway Bridge." },
+        "SERVER_PORT_DOWN": { "source": "connection", "required": true, "default": 1700, "description": "Downlink UDP port on the Gateway Bridge." },
+        "GATEWAY_EUI": { "source": "connection", "required": true, "description": "16-hex Gateway EUI (gateway_ID in global_conf)." },
+        "RADIO_0_FREQ": { "source": "region", "required": true, "description": "Center frequency (Hz) of radio 0 for the region channel plan." },
+        "RADIO_1_FREQ": { "source": "region", "required": true, "description": "Center frequency (Hz) of radio 1 for the region channel plan." },
+        "RADIO_BLOCK": { "source": "region", "required": true, "description": "The chan_multiSF_0..7 / chan_Lora_std / chan_FSK channel definitions serialized from the region channel plan (see renderRadioBlock)." }
+      }
+    },
+    "basics-station": {
+      "name": "LoRa Basics Station",
+      "description": "Semtech's Basics Station forwarder. Reads a station.conf plus tc.uri / tc.trust files. Point tc.uri at the ChirpStack Gateway Bridge Basics Station backend (WebSocket, commonly wss on port 3001).",
+      "templateSuffix": ".tmpl.conf",
+      "format": "jsonc",
+      "target": "ChirpStack Gateway Bridge — Basics Station backend (WebSocket, commonly wss://<host>:3001)",
+      "tokens": {
+        "TC_URI": { "source": "connection", "required": true, "description": "LNS WebSocket URI, e.g. wss://<host>:3001. Written to the gateway's tc.uri file." },
+        "TRUST_CERT": { "source": "connection", "required": true, "default": "server-certificate-authority.pem", "description": "Path/name of the CA trust PEM on the gateway (tc.trust). Use the LNS CA; a self-signed dev CA is acceptable on a private bench." },
+        "GATEWAY_EUI": { "source": "connection", "required": true, "description": "16-hex Gateway EUI (routerid in station_conf)." },
+        "RADIO_0_FREQ": { "source": "region", "required": true, "description": "Center frequency (Hz) of radio 0 for the region channel plan." },
+        "RADIO_1_FREQ": { "source": "region", "required": true, "description": "Center frequency (Hz) of radio 1 for the region channel plan." },
+        "RADIO_BLOCK": { "source": "region", "required": true, "description": "The chan_multiSF_0..7 / chan_Lora_std / chan_FSK channel definitions serialized from the region channel plan (see renderRadioBlock)." },
+        "CUPS_URI": { "source": "connection", "required": false, "description": "Optional CUPS URI (wss://<host>:3002) when the gateway is provisioned via CUPS instead of a static tc.uri." },
+        "TC_KEY": { "source": "connection", "required": false, "description": "Optional Authorization token written to the gateway's tc.key file." }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "vendor": "dragino",
+  "model": "dlos8",
+  "name": "DLOS8 Outdoor LoRaWAN Gateway",
+  "regions": [
+    "EU868",
+    "US915",
+    "AS923"
+  ],
+  "chipset": "SX1301",
+  "oui": [
+    "A84041"
+  ],
+  "admin": {
+    "defaultUrl": "http://10.130.1.1",
+    "apModeSsid": "dragino-XXXXXX",
+    "defaultCredentials": {
+      "username": "root",
+      "password": "dragino"
+    },
+    "credentialsNote": "LuCI (OpenWrt) default; change it on first login. Same firmware family as the LPS8. 10.130.1.1 is the Wi-Fi AP-mode IP (SSID dragino-xxxxxx, Wi-Fi password dragino+dragino); over Ethernet, browse to the DHCP-assigned IP on port 8000."
+  },
+  "configMethods": [
+    "web-ui",
+    "ssh-cli",
+    "forwarder-file"
+  ],
+  "packetForwarders": [
+    "semtech-udp"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json",
+      "forwarderFilePath": "/etc/lora/global_conf.json"
+    },
+    "web-ui": {
+      "path": "LoRaWAN → LoRaWAN Semtech UDP"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.dragino.com/products/lora-lorawan-gateway/item/160-dlos8.html",
+    "sha256": "776508241c6005102c48c48e60d3fe7842ced34836e52c2fa2cb9d9916689a56",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

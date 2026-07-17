@@ -1,0 +1,43 @@
+lorawan-gateway-catalog
+Copyright (C) 2026 Intelligent Farming Foundation
+
+This product includes software developed by Intelligent Farming Foundation
+and the lorawan-gateway-catalog contributors.
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your
+option) any later version. See the LICENSE file for the full text.
+
+Third-party components included in this repository retain their own
+licenses and copyright notices; see their respective files and headers.
+
+-------------------------------------------------------------------------------
+Third-party attributions
+-------------------------------------------------------------------------------
+
+Vendor documentation snapshots (gateways/<vendor>/<model>/reference/)
+--------------------------------------------------------------------
+Each gateway profile is authored from the vendor's own product documentation
+(admin URLs, default credentials, config-file paths, chipset, packet-forwarder
+mechanism). A snapshot of the documentation page a profile was authored from is
+retained under gateways/<vendor>/<model>/reference/ for authoring reference and
+drift detection, with its sha256 and retrieval date recorded in the profile's
+`provenance` block in gateway.json. These snapshots remain the property of their
+respective vendors, are copied for reference only, and are EXCLUDED from the
+published npm tarball (see the "files" allowlist in package.json).
+
+The authored artifacts that DO ship — the packet-forwarder config templates
+(gateways/<vendor>/<model>/config/*.tmpl.*), the walkthroughs, and the region
+channel-plan manifests — are ORIGINAL works created for this project from those
+facts, not copied from vendor config dumps. Wire-format and configuration facts
+(frequencies, ports, file paths, field names of the Semtech UDP and Basics
+Station formats) are not copyrightable; the templates that embed them are
+original work under AGPL-3.0-or-later.
+
+LoRa Alliance — RP002 Regional Parameters
+-----------------------------------------
+The channel-plan values in definitions/regions/*.json (band identifiers,
+uplink/RX2 frequencies, sub-band conventions) are facts drawn from the LoRa
+Alliance RP002 Regional Parameters specification. These are factual data, not a
+copyrightable expression, and are reproduced here for interoperability.

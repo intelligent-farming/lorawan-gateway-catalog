@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/intelligent-farming/lorawan-gateway-catalog/definitions/gateway.schema.json",
+  "title": "Gateway profile",
+  "description": "Metadata for one gateway model under gateways/<vendor>/<model>/gateway.json. The admin facts, credentials, config paths, chipset, and OUI must be verified against the captured reference/ documentation snapshot recorded in `provenance`.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vendor",
+    "model",
+    "name",
+    "regions",
+    "chipset",
+    "oui",
+    "admin",
+    "configMethods",
+    "packetForwarders",
+    "config",
+    "variantOf",
+    "provenance"
+  ],
+  "properties": {
+    "vendor": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Lowercase vendor slug; must equal the parent folder name."
+    },
+    "model": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Lowercase model slug; must equal the model folder name."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable product name (e.g. \"RAK7268 WisGate Edge Lite 2\")."
+    },
+    "regions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string" },
+      "description": "Region ids this model is authored for; each must exist in definitions/regions/."
+    },
+    "chipset": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Concentrator chipset (e.g. SX1302, SX1301, SX1303). Informational; the radio-block format is chipset-independent for the packet forwarders we template."
+    },
+    "oui": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[0-9A-Fa-f]{6,9}$" },
+      "description": "IEEE OUI prefix(es) (6, 7, or 9 hex chars) registered to the maker, used by detection to map a scanned Gateway EUI to this vendor."
+    },
+    "admin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["defaultUrl", "defaultCredentials"],
+      "properties": {
+        "defaultUrl": {
+          "type": "string",
+          "description": "Default admin URL or IP the box is reachable at out of the box."
+        },
+        "apModeSsid": {
+          "type": "string",
+          "description": "Wi-Fi AP-mode SSID pattern when the box hosts a setup access point (may contain XXXX for the per-unit suffix)."
+        },
+        "defaultCredentials": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["username", "password"],
+              "properties": {
+                "username": { "type": "string" },
+                "password": { "type": "string" }
+              }
+            },
+            {
+              "type": "null",
+              "description": "Null when there is no factory default (operator sets credentials on first boot)."
+            }
+          ],
+          "description": "Documented factory-default credentials, or null. NEVER a security guarantee — firmware-dependent; the walkthrough must tell the operator to change them."
+        },
+        "credentialsNote": {
+          "type": "string",
+          "description": "Caveat about firmware dependence / first-login prompts. Required when defaultCredentials is null."
+        }
+      }
+    },
+    "configMethods": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["web-ui", "forwarder-file", "ssh-cli"] },
+      "description": "How the operator can apply a config to this box (from definitions/config-methods.json configMethods)."
+    },
+    "packetForwarders": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["semtech-udp", "basics-station"] },
+      "description": "Packet forwarders this model supports (from definitions/config-methods.json packetForwarders)."
+    },
+    "config": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "template": { "type": "string", "description": "Path (relative to the model folder) of the authored template for a packet forwarder." },
+          "forwarderFilePath": { "type": "string", "description": "On-box path the rendered config is written to (forwarder-file method)." },
+          "path": { "type": "string", "description": "Menu path in the web UI (web-ui method)." }
+        }
+      },
+      "description": "Per-forwarder template + on-box path, and per-config-method access hints. Keys are forwarder ids and/or config-method ids."
+    },
+    "variantOf": {
+      "type": ["string", "null"],
+      "description": "\"<vendor>/<model>\" of the base variant when this is a board/firmware revision with a different config skeleton, else null."
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "sha256", "referencedAt"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["vendor-docs", "vendor-config", "captured", "synthetic"],
+          "description": "Provenance rank of the admin facts / template, best first: vendor-docs > vendor-config > captured > synthetic."
+        },
+        "url": { "type": "string", "description": "URL the reference/ snapshot was captured from." },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "sha256 of the captured reference/ documentation snapshot."
+        },
+        "referencedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "ISO date (YYYY-MM-DD) the documentation was captured."
+        }
+      }
+    },
+    "draft": {
+      "type": "boolean",
+      "description": "True for a scaffolded-but-unauthored profile: hidden from gateways(), configScript throws, render/fixture conformance checks are skipped, and the published package ships none."
+    }
+  }
+}

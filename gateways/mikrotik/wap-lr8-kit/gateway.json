@@ -1,0 +1,46 @@
+{
+  "vendor": "mikrotik",
+  "model": "wap-lr8-kit",
+  "name": "MikroTik wAP LR8 kit",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1301",
+  "oui": [
+    "2CC81B",
+    "48A98A",
+    "DC2C6E",
+    "E48D8C",
+    "6C3B6B",
+    "B869F4"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.88.1",
+    "apModeSsid": "MikroTik-XXXXXX",
+    "defaultCredentials": {
+      "username": "admin",
+      "password": ""
+    },
+    "credentialsNote": "RouterOS default (admin, no password); set a password on first login."
+  },
+  "configMethods": [
+    "ssh-cli"
+  ],
+  "packetForwarders": [
+    "semtech-udp"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://help.mikrotik.com/docs/spaces/UM/pages/2555969/LoRa",
+    "sha256": "5708b153d5a90725b4486979dc8b39acbb0068a1b30b219e7a23f61c7efee802",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

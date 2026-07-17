@@ -1,0 +1,24 @@
+{
+  "id": "US915",
+  "name": "US915 (902-928 MHz)",
+  "description": "North America ISM band. ChirpStack commonly runs sub-band 2 (channels 8-15) for an 8-channel gateway.",
+  "band": "US915",
+  "defaultSubBand": 2,
+  "channelPlan": {
+    "radios": [{ "freq": 904300000 }, { "freq": 905000000 }],
+    "multiSF": [
+      { "radio": 0, "if": -400000 },
+      { "radio": 0, "if": -200000 },
+      { "radio": 0, "if": 0 },
+      { "radio": 0, "if": 200000 },
+      { "radio": 1, "if": -300000 },
+      { "radio": 1, "if": -100000 },
+      { "radio": 1, "if": 100000 },
+      { "radio": 1, "if": 300000 }
+    ],
+    "loraStd": { "radio": 0, "if": 300000, "bandwidth": 500000, "spreadFactor": 8 },
+    "fsk": null,
+    "rx2": { "freq": 923300000, "dr": 8 }
+  },
+  "notes": "Sub-band 2: 125 kHz channels 903.9-905.3 MHz (channels 8-15) plus the 500 kHz channel 904.6 MHz (SF8BW500). RX2 923.3 MHz SF12BW500 (DR8). Gateways must match the ChirpStack region and sub-band exactly; mismatch is the most common silent join failure."
+}
