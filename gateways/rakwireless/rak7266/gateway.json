@@ -1,20 +1,20 @@
 {
   "vendor": "rakwireless",
-  "model": "rak7285",
-  "name": "RAK7285 WisGate Edge Ultra",
+  "model": "rak7266",
+  "name": "RAK7266 WisGate Soho Lite",
   "regions": [
     "EU868",
     "US915"
   ],
-  "chipset": "SX1303",
+  "chipset": "SX1302",
   "oui": [
     "AC1F09"
   ],
   "admin": {
     "defaultUrl": "http://192.168.230.1",
-    "apModeSsid": "RAK7285_XXXX",
+    "apModeSsid": "RAK7266_XXXX",
     "defaultCredentials": null,
-    "credentialsNote": "WisGateOS 2: log in as user `root` and set a new password on first boot — there is no factory default password. The AP-mode SSID also appears as RAK7285C_XXXX on the LTE (C) variant."
+    "credentialsNote": "WisGateOS 2: log in as user `root` and set a new password on first boot (>=12 chars incl. a number, a letter, and a special char) — there is no factory default password."
   },
   "configMethods": [
     "web-ui"
@@ -37,8 +37,8 @@
   "variantOf": null,
   "provenance": {
     "source": "vendor-docs",
-    "url": "https://docs.rakwireless.com/product-categories/wisgate/rak7285/overview/",
-    "sha256": "97dfd815f21fbca8d9f0ae405ff0132d774b3d2cd81747daca5bdc308d0c63e3",
+    "url": "https://docs.rakwireless.com/product-categories/wisgate/rak7266/datasheet/",
+    "sha256": "a7aa6002ae2f0be7f24228077dc7ca1df1ffa0ba33241a983b2608e518d45c90",
     "referencedAt": "2026-07-16"
   },
   "draft": false

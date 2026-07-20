@@ -1,14 +1,14 @@
-# Connect the RAK7285 WisGate Edge Ultra to ChirpStack
+# Connect the LPS8v2 Indoor LoRaWAN Gateway to ChirpStack
 
-The **RAK7285 WisGate Edge Ultra** (SX1303) forwards LoRaWAN uplinks to a ChirpStack
+The **LPS8v2 Indoor LoRaWAN Gateway** (SX1302) forwards LoRaWAN uplinks to a ChirpStack
 Gateway Bridge. This walkthrough gets it online using the connection settings
 and config Leftenant generated above.
 
 ## 1. Reach the gateway
 
-- Open **http://192.168.230.1** (AP-mode Wi-Fi SSID `RAK7285_XXXX`).
-- Log in with the per-device credentials from the label / vendor documentation.
-- **Change the default credentials now.** WisGateOS 2: log in as user `root` and set a new password on first boot — there is no factory default password. The AP-mode SSID also appears as RAK7285C_XXXX on the LTE (C) variant.
+- Open **http://10.130.1.1** (AP-mode Wi-Fi SSID `dragino-XXXXXX`).
+- Log in with default credentials **root / dragino**.
+- **Change the default credentials now.** Web GUI default root/dragino. 10.130.1.1 is the Wi-Fi AP-mode IP (SSID dragino-xxxxxx, Wi-Fi password dragino+dragino); over the WAN it is DHCP, with a fallback IP 172.31.255.254/30 (set your PC to 172.31.255.253). Debian platform, not OpenWrt.
 
 ## 2. Configure the forwarder
 
@@ -18,7 +18,7 @@ Leftenant shows the **connection settings** (the values to enter) and the **full
 
 **Web UI (form):**
 
-1. Open **LoRa → LoRa Configuration (Work Mode: Packet Forwarder)**.
+1. Open **LoRaWAN → LoRaWAN Semtech UDP**.
 2. Set **Server Address** to your ChirpStack **Gateway Bridge** host, and **Server Port Up** / **Server Port Down** to **1700**.
 3. Set the gateway's region/sub-band to match ChirpStack, then save.
 
@@ -40,7 +40,7 @@ Point it at the ChirpStack Gateway Bridge **Basics Station backend** (not the UD
 - If it does not appear: re-check the server address/port, the Gateway EUI, and
   that the gateway's region/sub-band matches the ChirpStack region.
 
-> WisGateOS 2 (OpenWrt) web UI; the SX1303 is full-duplex. RAK7285 and RAK7285C (C = LTE Cat-4) share this config skeleton.
+> Indoor, SX1302, but a DEBIAN platform (not OpenWrt) with a built-in ChirpStack v4 server and Node-RED. Use this Semtech UDP config only to point it at an EXTERNAL ChirpStack Gateway Bridge instead of its built-in server. Also supports the ChirpStack MQTT forwarder. The on-box config-file path differs from the OpenWrt models and is unverified here.
 
 ---
-_Catalog profile: `rakwireless/rak7285`._
+_Catalog profile: `dragino/lps8v2`._

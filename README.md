@@ -143,11 +143,21 @@ must all exist here (conformance-enforced).
 | rakwireless | rak7268 | SX1302 | semtech-udp, basics-station | EU868, US915, AS923, AU915 |
 | rakwireless | rak7289 | SX1302 (dual) | semtech-udp, basics-station | EU868, US915, AU915 |
 | rakwireless | rak7285 | SX1303 | semtech-udp, basics-station | EU868, US915 |
+| rakwireless | rak7240 | SX1301 | semtech-udp, basics-station | EU868, US915 |
+| rakwireless | rak7267 | SX1303 | semtech-udp, basics-station | EU868, US915 |
+| rakwireless | rak7266 | SX1302 | semtech-udp, basics-station | EU868, US915 |
 | dragino | lps8 | SX1308 | semtech-udp | EU868, US915 |
-| dragino | dlos8 | SX1308 | semtech-udp | EU868, US915, AS923 |
+| dragino | dlos8 | SX1301 | semtech-udp | EU868, US915, AS923 |
+| dragino | lps8n | SX1302 | semtech-udp, basics-station | EU868, US915 |
+| dragino | dlos8n | SX1302 | semtech-udp, basics-station | EU868, US915, AS923 |
+| dragino | lg308n | SX1302 | semtech-udp | EU868, US915 |
+| dragino | lig16 | SX1302 | semtech-udp, basics-station | EU868, US915 |
+| dragino | lps8v2 | SX1302 | semtech-udp, basics-station | EU868, US915 |
 | milesight | ug65 | SX1302 | semtech-udp, basics-station | EU868, US915 |
 | milesight | ug67 | SX1302 | semtech-udp, basics-station | EU868, US915, AS923 |
 | milesight | sg50 | SX1302 | semtech-udp, basics-station | EU868, US915 |
+| milesight | ug63 | SX1302 | semtech-udp, basics-station | EU868, US915 |
+| milesight | ug56 | SX1302 | semtech-udp, basics-station | EU868, US915 |
 | kerlink | ifemtocell | SX1301 | semtech-udp | EU868, US915, IN865 |
 | mikrotik | wap-lr8-kit | SX1301 | semtech-udp | EU868, US915 |
 

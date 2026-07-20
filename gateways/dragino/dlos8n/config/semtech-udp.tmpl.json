@@ -1,0 +1,24 @@
+{
+  "_comment": "ChirpStack Semtech UDP global_conf.json for DLOS8N Outdoor LoRaWAN Gateway. Authored by @intelligent-farming/lorawan-gateway-catalog (AGPL-3.0-or-later; see NOTICE). Point the packet forwarder at the ChirpStack Gateway Bridge UDP backend (default port 1700). Downlink additionally needs a tx_lut tuned to this concentrator — see the vendor documentation.",
+  "SX130x_conf": {
+    "lorawan_public": true,
+    "clksrc": 0,
+    "antenna_gain": 0,
+    "full_duplex": false,
+    "radio_0": { "enable": true, "type": "SX1250", "freq": {{RADIO_0_FREQ}}, "tx_enable": true },
+    "radio_1": { "enable": true, "type": "SX1250", "freq": {{RADIO_1_FREQ}}, "tx_enable": false },
+{{RADIO_BLOCK}}
+  },
+  "gateway_conf": {
+    "gateway_ID": "{{GATEWAY_EUI}}",
+    "server_address": "{{SERVER_ADDRESS}}",
+    "serv_port_up": {{SERVER_PORT_UP}},
+    "serv_port_down": {{SERVER_PORT_DOWN}},
+    "keepalive_interval": 10,
+    "stat_interval": 30,
+    "push_timeout_ms": 100,
+    "forward_crc_valid": true,
+    "forward_crc_error": false,
+    "forward_crc_disabled": false
+  }
+}

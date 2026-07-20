@@ -1,14 +1,14 @@
-# Connect the RAK7285 WisGate Edge Ultra to ChirpStack
+# Connect the Milesight UG56 Industrial LoRaWAN Gateway to ChirpStack
 
-The **RAK7285 WisGate Edge Ultra** (SX1303) forwards LoRaWAN uplinks to a ChirpStack
+The **Milesight UG56 Industrial LoRaWAN Gateway** (SX1302) forwards LoRaWAN uplinks to a ChirpStack
 Gateway Bridge. This walkthrough gets it online using the connection settings
 and config Leftenant generated above.
 
 ## 1. Reach the gateway
 
-- Open **http://192.168.230.1** (AP-mode Wi-Fi SSID `RAK7285_XXXX`).
-- Log in with the per-device credentials from the label / vendor documentation.
-- **Change the default credentials now.** WisGateOS 2: log in as user `root` and set a new password on first boot — there is no factory default password. The AP-mode SSID also appears as RAK7285C_XXXX on the LTE (C) variant.
+- Open **http://192.168.1.1** (AP-mode Wi-Fi SSID `Gateway_******`).
+- Log in with default credentials **admin / password**.
+- **Change the default credentials now.** Milesight default; a password change is forced on first login (5 wrong attempts = 10-min lockout). Reach it via the Wi-Fi AP (SSID Gateway_******, default Wi-Fi password iotpassword) at 192.168.1.1; the wired Ethernet (WAN, PoE PD) port is DHCP by default (legacy firmware used 192.168.23.150).
 
 ## 2. Configure the forwarder
 
@@ -18,7 +18,7 @@ Leftenant shows the **connection settings** (the values to enter) and the **full
 
 **Web UI (form):**
 
-1. Open **LoRa → LoRa Configuration (Work Mode: Packet Forwarder)**.
+1. Open **Packet Forwarder → General → Multi-Destination**.
 2. Set **Server Address** to your ChirpStack **Gateway Bridge** host, and **Server Port Up** / **Server Port Down** to **1700**.
 3. Set the gateway's region/sub-band to match ChirpStack, then save.
 
@@ -40,7 +40,7 @@ Point it at the ChirpStack Gateway Bridge **Basics Station backend** (not the UD
 - If it does not appear: re-check the server address/port, the Gateway EUI, and
   that the gateway's region/sub-band matches the ChirpStack region.
 
-> WisGateOS 2 (OpenWrt) web UI; the SX1303 is full-duplex. RAK7285 and RAK7285C (C = LTE Cat-4) share this config skeleton.
+> Industrial indoor gateway (rugged metal enclosure), SX1302. Optional 4G LTE; native PoE PD 802.3af; Wi-Fi AP/client. Supports multiple simultaneous packet-forwarder destinations (Multi-Destination). Model string e.g. UG56-L04EU-868M.
 
 ---
-_Catalog profile: `rakwireless/rak7285`._
+_Catalog profile: `milesight/ug56`._

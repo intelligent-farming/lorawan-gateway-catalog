@@ -1,14 +1,14 @@
-# Connect the RAK7285 WisGate Edge Ultra to ChirpStack
+# Connect the RAK7266 WisGate Soho Lite to ChirpStack
 
-The **RAK7285 WisGate Edge Ultra** (SX1303) forwards LoRaWAN uplinks to a ChirpStack
+The **RAK7266 WisGate Soho Lite** (SX1302) forwards LoRaWAN uplinks to a ChirpStack
 Gateway Bridge. This walkthrough gets it online using the connection settings
 and config Leftenant generated above.
 
 ## 1. Reach the gateway
 
-- Open **http://192.168.230.1** (AP-mode Wi-Fi SSID `RAK7285_XXXX`).
+- Open **http://192.168.230.1** (AP-mode Wi-Fi SSID `RAK7266_XXXX`).
 - Log in with the per-device credentials from the label / vendor documentation.
-- **Change the default credentials now.** WisGateOS 2: log in as user `root` and set a new password on first boot — there is no factory default password. The AP-mode SSID also appears as RAK7285C_XXXX on the LTE (C) variant.
+- **Change the default credentials now.** WisGateOS 2: log in as user `root` and set a new password on first boot (>=12 chars incl. a number, a letter, and a special char) — there is no factory default password.
 
 ## 2. Configure the forwarder
 
@@ -40,7 +40,7 @@ Point it at the ChirpStack Gateway Bridge **Basics Station backend** (not the UD
 - If it does not appear: re-check the server address/port, the Gateway EUI, and
   that the gateway's region/sub-band matches the ChirpStack region.
 
-> WisGateOS 2 (OpenWrt) web UI; the SX1303 is full-duplex. RAK7285 and RAK7285C (C = LTE Cat-4) share this config skeleton.
+> Indoor (12 VDC), WisGateOS 2. Default concentrator is SX1302 (SX1303 option). RAK7266 = LTE Cat 1; RAK7266S = no cellular (AP SSID RAK7266S_XXXX).
 
 ---
-_Catalog profile: `rakwireless/rak7285`._
+_Catalog profile: `rakwireless/rak7266`._

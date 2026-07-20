@@ -1,14 +1,14 @@
-# Connect the RAK7285 WisGate Edge Ultra to ChirpStack
+# Connect the LIG16 Indoor LoRaWAN Gateway to ChirpStack
 
-The **RAK7285 WisGate Edge Ultra** (SX1303) forwards LoRaWAN uplinks to a ChirpStack
+The **LIG16 Indoor LoRaWAN Gateway** (SX1302) forwards LoRaWAN uplinks to a ChirpStack
 Gateway Bridge. This walkthrough gets it online using the connection settings
 and config Leftenant generated above.
 
 ## 1. Reach the gateway
 
-- Open **http://192.168.230.1** (AP-mode Wi-Fi SSID `RAK7285_XXXX`).
-- Log in with the per-device credentials from the label / vendor documentation.
-- **Change the default credentials now.** WisGateOS 2: log in as user `root` and set a new password on first boot — there is no factory default password. The AP-mode SSID also appears as RAK7285C_XXXX on the LTE (C) variant.
+- Open **http://10.130.1.1** (AP-mode Wi-Fi SSID `dragino-XXXXXX`).
+- Log in with default credentials **root / dragino**.
+- **Change the default credentials now.** LuCI (OpenWrt) default; change it on first login. 10.130.1.1 is the Wi-Fi AP-mode IP (SSID dragino-xxxxxx, Wi-Fi password dragino+dragino); over Ethernet, browse to the DHCP-assigned IP on port 8000. Verify against the model manual.
 
 ## 2. Configure the forwarder
 
@@ -18,9 +18,13 @@ Leftenant shows the **connection settings** (the values to enter) and the **full
 
 **Web UI (form):**
 
-1. Open **LoRa → LoRa Configuration (Work Mode: Packet Forwarder)**.
+1. Open **LoRaWAN → LoRaWAN Semtech UDP**.
 2. Set **Server Address** to your ChirpStack **Gateway Bridge** host, and **Server Port Up** / **Server Port Down** to **1700**.
 3. Set the gateway's region/sub-band to match ChirpStack, then save.
+
+**File / SSH (advanced):**
+
+1. Write the **full config file above** to `/etc/lora/global_conf.json` and restart the packet forwarder. (Skip this if you used the web UI form — the firmware manages that file.)
 
 Confirm the **region and sub-band match your ChirpStack region exactly** — the most common silent join failure.
 
@@ -40,7 +44,7 @@ Point it at the ChirpStack Gateway Bridge **Basics Station backend** (not the UD
 - If it does not appear: re-check the server address/port, the Gateway EUI, and
   that the gateway's region/sub-band matches the ChirpStack region.
 
-> WisGateOS 2 (OpenWrt) web UI; the SX1303 is full-duplex. RAK7285 and RAK7285C (C = LTE Cat-4) share this config skeleton.
+> Indoor industrial gateway, OpenWrt, SX1302 (+2x SX1250).
 
 ---
-_Catalog profile: `rakwireless/rak7285`._
+_Catalog profile: `dragino/lig16`._

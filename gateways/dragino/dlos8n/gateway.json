@@ -1,0 +1,52 @@
+{
+  "vendor": "dragino",
+  "model": "dlos8n",
+  "name": "DLOS8N Outdoor LoRaWAN Gateway",
+  "regions": [
+    "EU868",
+    "US915",
+    "AS923"
+  ],
+  "chipset": "SX1302",
+  "oui": [
+    "A84041"
+  ],
+  "admin": {
+    "defaultUrl": "http://10.130.1.1",
+    "apModeSsid": "dragino-XXXXXX",
+    "defaultCredentials": {
+      "username": "root",
+      "password": "dragino"
+    },
+    "credentialsNote": "LuCI (OpenWrt) default; change it on first login. 10.130.1.1 is the Wi-Fi AP-mode IP (SSID dragino-xxxxxx, Wi-Fi password dragino+dragino); over Ethernet, browse to the DHCP-assigned IP on port 8000. Verify against the model manual."
+  },
+  "configMethods": [
+    "web-ui",
+    "ssh-cli",
+    "forwarder-file"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json",
+      "forwarderFilePath": "/etc/lora/global_conf.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "LoRaWAN → LoRaWAN Semtech UDP"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.dragino.com/products/lora-lorawan-gateway/item/225-dlos8n.html",
+    "sha256": "b97d26cab9b95ff94fa013959f94c2ff21e1e639ccb9b834eb06c5080e205f69",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

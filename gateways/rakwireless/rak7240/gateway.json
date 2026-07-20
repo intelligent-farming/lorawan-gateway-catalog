@@ -1,0 +1,48 @@
+{
+  "vendor": "rakwireless",
+  "model": "rak7240",
+  "name": "RAK7240 WisGate Edge Prime",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1301",
+  "oui": [
+    "AC1F09"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.230.1",
+    "apModeSsid": "RAK7240_XXXX",
+    "defaultCredentials": {
+      "username": "root",
+      "password": "root"
+    },
+    "credentialsNote": "WisGateOS 1 default; firmware-dependent — change it on first login. Never present as a security guarantee."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "LoRa Network → Network Settings (Work Mode: Packet Forwarder)"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://docs.rakwireless.com/product-categories/wisgate/rak7240/datasheet/",
+    "sha256": "9516c52a8fce5dcae7d49a1117e15eba526b32164c543a9fe7e700a3c52f0dd0",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

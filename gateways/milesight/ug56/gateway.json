@@ -1,0 +1,49 @@
+{
+  "vendor": "milesight",
+  "model": "ug56",
+  "name": "Milesight UG56 Industrial LoRaWAN Gateway",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1302",
+  "oui": [
+    "24E124",
+    "C0BA1F"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.1.1",
+    "apModeSsid": "Gateway_******",
+    "defaultCredentials": {
+      "username": "admin",
+      "password": "password"
+    },
+    "credentialsNote": "Milesight default; a password change is forced on first login (5 wrong attempts = 10-min lockout). Reach it via the Wi-Fi AP (SSID Gateway_******, default Wi-Fi password iotpassword) at 192.168.1.1; the wired Ethernet (WAN, PoE PD) port is DHCP by default (legacy firmware used 192.168.23.150)."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "Packet Forwarder → General → Multi-Destination"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://resource.milesight.com/milesight/iot/document/ug56-datasheet-en.pdf",
+    "sha256": "81e8c00f02e3ab0b57a2fe6ea98ab2cfac381844b05c0997db00abec0b21e335",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

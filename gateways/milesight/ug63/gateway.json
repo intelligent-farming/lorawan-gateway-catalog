@@ -1,0 +1,49 @@
+{
+  "vendor": "milesight",
+  "model": "ug63",
+  "name": "Milesight UG63 Mini LoRaWAN Gateway",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1302",
+  "oui": [
+    "24E124",
+    "C0BA1F"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.1.1",
+    "apModeSsid": "Gateway_******",
+    "defaultCredentials": {
+      "username": "admin",
+      "password": "password"
+    },
+    "credentialsNote": "Milesight default; a password change is prompted on first login (firmware V2.2+). Reach it via the Wi-Fi AP (SSID Gateway_******) at 192.168.1.1; the wired Ethernet (WAN) port is DHCP by default."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "Packet Forward → General → Destination"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://resource.milesight.com/milesight/iot/document/ug63-datasheet-en.pdf",
+    "sha256": "0d680394c284e1747b9c61e6d65ed284a9ae09da4ecdf52e9c3e4997989d8939",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}
