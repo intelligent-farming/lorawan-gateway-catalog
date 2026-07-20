@@ -141,11 +141,19 @@ must all exist here (conformance-enforced).
 | Vendor | Model | Chipset | Forwarders | Regions |
 |---|---|---|---|---|
 | rakwireless | rak7268 | SX1302 | semtech-udp, basics-station | EU868, US915, AS923, AU915 |
-| rakwireless | rak7289 | SX1302 (dual) | semtech-udp, basics-station | EU868, US915, AU915 |
+| rakwireless | rak7268v2 | SX1302 | semtech-udp, basics-station | EU868, US915, AS923, AU915 |
+| rakwireless | rak7289 | SX1303 | semtech-udp, basics-station | EU868, US915, AU915 |
+| rakwireless | rak7289v2 | SX1303 | semtech-udp, basics-station | EU868, US915, AU915 |
 | rakwireless | rak7285 | SX1303 | semtech-udp, basics-station | EU868, US915 |
 | rakwireless | rak7240 | SX1301 | semtech-udp, basics-station | EU868, US915 |
+| rakwireless | rak7240v2 | SX1303 | semtech-udp, basics-station | EU868, US915 |
 | rakwireless | rak7267 | SX1303 | semtech-udp, basics-station | EU868, US915 |
 | rakwireless | rak7266 | SX1302 | semtech-udp, basics-station | EU868, US915 |
+
+RAKwireless originals (rak7268, rak7289, rak7240) run **WisGateOS 1** (`root`/`root`, menu *LoRa
+Network → Network Settings*) and are EOL; the **`…v2`** profiles are the current SKUs on
+**WisGateOS 2** (no factory password — set `root`'s on first boot — menu *LoRa → LoRa
+Configuration*). RAK7285/7267/7266 already ship WisGateOS 2.
 | dragino | lps8 | SX1308 | semtech-udp | EU868, US915 |
 | dragino | dlos8 | SX1301 | semtech-udp | EU868, US915, AS923 |
 | dragino | lps8n | SX1302 | semtech-udp, basics-station | EU868, US915 |

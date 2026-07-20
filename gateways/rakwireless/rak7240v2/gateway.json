@@ -1,11 +1,10 @@
 {
   "vendor": "rakwireless",
-  "model": "rak7289",
-  "name": "RAK7289 WisGate Edge Pro",
+  "model": "rak7240v2",
+  "name": "RAK7240V2 WisGate Edge Prime",
   "regions": [
     "EU868",
-    "US915",
-    "AU915"
+    "US915"
   ],
   "chipset": "SX1303 (up to two concentrators)",
   "oui": [
@@ -13,12 +12,9 @@
   ],
   "admin": {
     "defaultUrl": "http://192.168.230.1",
-    "apModeSsid": "RAK7289_XXXX",
-    "defaultCredentials": {
-      "username": "root",
-      "password": "root"
-    },
-    "credentialsNote": "WisGateOS 1 default; firmware-dependent — change it on first login. Never present as a security guarantee."
+    "apModeSsid": "RAK7240V2_XXXX",
+    "defaultCredentials": null,
+    "credentialsNote": "WisGateOS 2: log in as user `root` and set a new password on first boot (>=12 chars incl. a number, a letter, and a special char) — there is no factory default password."
   },
   "configMethods": [
     "web-ui"
@@ -35,14 +31,14 @@
       "template": "config/basics-station.tmpl.conf"
     },
     "web-ui": {
-      "path": "LoRa Network → Network Settings (Work Mode: Packet Forwarder)"
+      "path": "LoRa → LoRa Configuration (Work Mode: Packet Forwarder)"
     }
   },
   "variantOf": null,
   "provenance": {
     "source": "vendor-docs",
-    "url": "https://docs.rakwireless.com/product-categories/wisgate/rak7289/datasheet/",
-    "sha256": "1d101b95aa0d5668b5320448cb6443fe3127b857b1ed3bd4aceb85707fac0168",
+    "url": "https://docs.rakwireless.com/product-categories/wisgate/rak7240v2/overview/",
+    "sha256": "78436d9794e1f610959cde11cbee0f6bfe82a3e8982b25ea74a2b78ae3225714",
     "referencedAt": "2026-07-16"
   },
   "draft": false

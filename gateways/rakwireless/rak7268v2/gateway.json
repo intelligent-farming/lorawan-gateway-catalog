@@ -1,0 +1,47 @@
+{
+  "vendor": "rakwireless",
+  "model": "rak7268v2",
+  "name": "RAK7268V2 WisGate Edge Lite 2",
+  "regions": [
+    "EU868",
+    "US915",
+    "AS923",
+    "AU915"
+  ],
+  "chipset": "SX1302",
+  "oui": [
+    "AC1F09"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.230.1",
+    "apModeSsid": "RAK7268V2_XXXX",
+    "defaultCredentials": null,
+    "credentialsNote": "WisGateOS 2: log in as user `root` and set a new password on first boot (>=12 chars incl. a number, a letter, and a special char) — there is no factory default password."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "LoRa → LoRa Configuration (Work Mode: Packet Forwarder)"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/overview/",
+    "sha256": "dc0202b56c9faf5591b1b6037ba42b249abe3f932cf7c6be9749ac0b81f6d5ff",
+    "referencedAt": "2026-07-16"
+  },
+  "draft": false
+}

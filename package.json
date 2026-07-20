@@ -1,6 +1,6 @@
 {
   "name": "@intelligent-farming/lorawan-gateway-catalog",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Curated LoRaWAN gateway profiles to assist an operator in connecting a gateway to ChirpStack.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
