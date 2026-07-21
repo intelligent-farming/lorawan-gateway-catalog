@@ -167,7 +167,19 @@ Configuration*). RAK7285/7267/7266 already ship WisGateOS 2.
 | milesight | ug63 | SX1302 | semtech-udp, basics-station | EU868, US915 |
 | milesight | ug56 | SX1302 | semtech-udp, basics-station | EU868, US915 |
 | kerlink | ifemtocell | SX1301 | semtech-udp | EU868, US915, IN865 |
+| kerlink | istation | SX1301 | semtech-udp, basics-station | EU868, US915 |
 | mikrotik | wap-lr8-kit | SX1301 | semtech-udp | EU868, US915 |
+| multitech | mtcdt | SX1301 | semtech-udp, basics-station | EU868, US915 |
+| multitech | mtcap | SX1308 | semtech-udp, basics-station | EU868, US915 |
+| makerfabs | sx1302 | SX1302 | semtech-udp, basics-station | EU868, US915 |
+| makerfabs | sx1302-4g | SX1302 | semtech-udp, basics-station | EU868, US915 |
+
+MultiTech's mPower UI takes a **pasted `global_conf.json`** (so the config file is
+the primary artifact there); Kerlink runs **KerOS** (SSH / lorafwd). The MultiTech
+Conduit's concentrator card is swappable (SX1301 today, SX1302 on the MTAC-003
+card). The **makerfabs** SX1302 profiles are the Seeed **SenseCAP M2** hardware
+Makerfabs resells (MT7628 / OpenWrt web UI; Gateway EUI is Seeed-assigned, OUI
+`2CF7F1`).
 
 The **mikrotik/wap-lr8-kit** runs RouterOS, whose recommended path is the native
 `/lora set … network-server=…` CLI (it forwards over Semtech UDP). Its

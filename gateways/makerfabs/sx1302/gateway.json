@@ -1,0 +1,45 @@
+{
+  "vendor": "makerfabs",
+  "model": "sx1302",
+  "name": "Makerfabs SX1302 LoRaWAN Gateway (SenseCAP M2)",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1302",
+  "oui": [
+    "2CF7F1"
+  ],
+  "admin": {
+    "defaultUrl": "http://192.168.168.1",
+    "apModeSsid": "SenseCAP_XXXXXX",
+    "defaultCredentials": null,
+    "credentialsNote": "This is Seeed SenseCAP M2 hardware (MediaTek MT7628 / OpenWrt \"SenseCAP Local Console\") resold by Makerfabs. Web login is per-unit — the username/password are printed on the device label. Reach it at http://192.168.168.1 over Ethernet (DHCP) or the Wi-Fi AP SenseCAP_XXXXXX (default Wi-Fi password 12345678)."
+  },
+  "configMethods": [
+    "web-ui"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "LoRa → LoRa Network (Work Mode: Packet Forwarder)"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.makerfabs.com/sensecap-m2-multi-platform-lorawan-indoor-gateway-sx1302.html",
+    "sha256": "9b36f7f9a4bdf18830d59fe1e9e8ad6edab2dbf200c0005eac371a1edbfb29d6",
+    "referencedAt": "2026-07-17"
+  },
+  "draft": false
+}

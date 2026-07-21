@@ -1,0 +1,47 @@
+{
+  "vendor": "kerlink",
+  "model": "istation",
+  "name": "Kerlink Wirnet iStation",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1301",
+  "oui": [
+    "7076FF"
+  ],
+  "admin": {
+    "defaultUrl": "https://<gateway-ip>",
+    "apModeSsid": "klk-wiis-XXXXXX",
+    "defaultCredentials": {
+      "username": "admin",
+      "password": "pwd4admin"
+    },
+    "credentialsNote": "KerOS web admin: admin/pwd4admin (older firmware admin/admin; KerOS 6.4+ uses a unique per-device factory password). SSH root password is per-device: pdmk-XXXXXX (last 6 of the Board ID). The Ethernet port is a DHCP client — reach the box at its assigned IP (Wi-Fi-AP SSID klk-wiis-XXXXXX)."
+  },
+  "configMethods": [
+    "ssh-cli",
+    "forwarder-file"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json",
+      "forwarderFilePath": "/user/spf/etc/global_conf.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://www.kerlink.com/product/wirnet-istation/",
+    "sha256": "6bc0ff21883832d555bfa4b5e3fd5f5858ffd669071d3e6a7cecda47a83da871",
+    "referencedAt": "2026-07-17"
+  },
+  "draft": false
+}

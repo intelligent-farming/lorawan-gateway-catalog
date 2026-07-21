@@ -1,0 +1,47 @@
+{
+  "vendor": "multitech",
+  "model": "mtcdt",
+  "name": "MultiTech Conduit (MTCDT)",
+  "regions": [
+    "EU868",
+    "US915"
+  ],
+  "chipset": "SX1301 (MTAC-LORA card)",
+  "oui": [
+    "000800",
+    "008000"
+  ],
+  "admin": {
+    "defaultUrl": "https://192.168.2.1",
+    "defaultCredentials": null,
+    "credentialsNote": "mPower (AEP) has no factory login — first boot runs commissioning, where you create the admin username and password. Reach the UI at https://192.168.2.1 over the Ethernet LAN port. The packet-forwarder screen is a JSON editor (Manual Configuration), so the full config above pastes in directly."
+  },
+  "configMethods": [
+    "web-ui",
+    "forwarder-file"
+  ],
+  "packetForwarders": [
+    "semtech-udp",
+    "basics-station"
+  ],
+  "config": {
+    "semtech-udp": {
+      "template": "config/semtech-udp.tmpl.json",
+      "forwarderFilePath": "/var/config/lora/global_conf.json"
+    },
+    "basics-station": {
+      "template": "config/basics-station.tmpl.conf"
+    },
+    "web-ui": {
+      "path": "LoRaWAN → Network Settings → LoRa Mode: Packet Forwarder → Manual Configuration"
+    }
+  },
+  "variantOf": null,
+  "provenance": {
+    "source": "vendor-docs",
+    "url": "https://multitech.com/all-products/lorawan-devices/lorawan-gateways/",
+    "sha256": "b7b54e42e9438f3c73fe3e8da3c7d7f5b542118e65a256cd52295709a8120aac",
+    "referencedAt": "2026-07-17"
+  },
+  "draft": false
+}
