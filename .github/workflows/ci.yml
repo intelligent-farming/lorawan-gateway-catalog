@@ -35,16 +35,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          # A package-lock.json is committed, so cache npm's global store keyed
-          # off it for faster, reproducible installs.
-          cache: npm
 
-      # `npm ci` installs exactly what package-lock.json pins and fails if the
-      # lockfile and package.json disagree. The @intelligent-farming/oui-registry
-      # dependency is published to the registry, so the isolated CI checkout
-      # installs it without needing the sibling repo present.
+      # package-lock.json is gitignored (not committed), so `npm ci` and
+      # setup-node's npm cache — both of which require a lockfile in the checkout
+      # — are not used. `npm install` resolves from package.json against the
+      # registry; the @intelligent-farming/oui-registry dependency is published
+      # there, so the isolated CI checkout installs it without needing the
+      # sibling repo present.
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run tests
         run: npm test
