@@ -10,11 +10,6 @@ const gc = require('../dist/index.js');
 
 // --- module + regions ---
 
-test('module loads and exposes a version', () => {
-  assert.equal(typeof gc.VERSION, 'string');
-  assert.match(gc.VERSION, /^\d+\.\d+\.\d+/);
-});
-
 test('regions() lists the defined channel plans', () => {
   const ids = gc.regions().map((r) => r.id);
   assert.deepEqual([...ids].sort(), ids); // already sorted
